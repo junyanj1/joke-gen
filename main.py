@@ -23,7 +23,7 @@ START_LETTER = 0
 BATCH_SIZE = 32
 MLE_TRAIN_EPOCHS = 2   # 100
 ADV_TRAIN_EPOCHS = 2   # 50
-POS_NEG_SAMPLES = 1000  # 10000
+POS_NEG_SAMPLES = 100  # 10000
 
 GEN_EMBEDDING_DIM = 32
 GEN_HIDDEN_DIM = 32
@@ -35,8 +35,8 @@ DIS_HIDDEN_DIM = 64
 #pretrained_gen_path = './gen_MLEtrain_EMBDIM32_HIDDENDIM32_VOCAB5000_MAXSEQLEN20.trc'
 # pretrained_dis_path = './dis_pretrain_EMBDIM_64_HIDDENDIM64_VOCAB5000_MAXSEQLEN20.trc'
 
-pretrained_gen_path = 'generator.pt'
-pretrained_dis_path = 'discriminator.pt'
+pretrained_gen_path = 'model_G.pt'
+pretrained_dis_path = 'model_D.pt'
 
 
 class JokeDataset(torch.utils.data.Dataset):
@@ -116,6 +116,7 @@ def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs, log_fil
     for epoch in range(epochs):
         with open(log_file, "a") as writer:
             print('epoch %d : ' % (epoch + 1), end='', file=writer)
+            print('epoch %d : ' % (epoch + 1), end='')
         sys.stdout.flush()
         total_loss = 0
 
@@ -142,10 +143,12 @@ def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs, log_fil
                                                    start_letter=START_LETTER, gpu=CUDA)
         with open(log_file, "a") as writer:
             print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss), file=writer)
+            print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss))
+
     #torch.save(gen, 'netG_MLE.pt')
 
 
-def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='gan.txt'):
+def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='logs_gan.txt'):
     """
     The generator is trained using policy gradients, using the reward from the discriminator.
     Training is done for num_batches batches.
@@ -167,6 +170,8 @@ def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='gan.txt
 
     with open(log_file, "a") as writer:
         print(' oracle_sample_NLL = %.4f' % oracle_loss, file=writer)
+        print(' oracle_sample_NLL = %.4f' % oracle_loss)
+
 
     #torch.save(gen, 'netG_RL.pt')
     #torch.save(dis, 'netD_RL.pt')
@@ -188,6 +193,8 @@ def train_discriminator(discriminator, dis_opt, real_data_samples, generator, or
         for epoch in range(epochs):
             with open(log_file, "a") as writer:
                 print('d-step %d epoch %d : ' % (d_step + 1, epoch + 1), end='', file=writer)
+                print('d-step %d epoch %d : ' % (d_step + 1, epoch + 1), end='')
+
             sys.stdout.flush()
             total_loss = 0
             total_acc = 0
@@ -216,6 +223,8 @@ def train_discriminator(discriminator, dis_opt, real_data_samples, generator, or
             with open(log_file, "a") as writer:
                 print(' average_loss = %.4f, train_acc = %.4f, val_acc = %.4f' % (
                     total_loss, total_acc, torch.sum((val_pred>0.5)==(val_target>0.5)).data.item()/200.), file=writer)
+                print(' average_loss = %.4f, train_acc = %.4f, val_acc = %.4f' % (
+                    total_loss, total_acc, torch.sum((val_pred > 0.5) == (val_target > 0.5)).data.item() / 200.))
     #torch.save(dis, 'netD_dis.pt')
 
 
@@ -237,21 +246,23 @@ if __name__ == '__main__':
         # oracle_samples = oracle_samples.cuda()
 
 
-    log_file_1 = 'generator.txt'
+    log_file_1 = 'logs_generator.txt'
     # GENERATOR MLE TRAINING
     print('Starting Generator MLE Training...')
     gen_optimizer = optim.Adam(gen.parameters(), lr=1e-2)
     train_generator_MLE(gen, gen_optimizer, oracle, train_loader, MLE_TRAIN_EPOCHS, log_file_1)
 
+    print("Saving pretrained generator model")
     torch.save(gen.state_dict(), pretrained_gen_path)
     #gen.load_state_dict(torch.load(pretrained_gen_path))
 
     # PRETRAIN DISCRIMINATOR
-    log_file_2 = 'discriminator.txt'
+    log_file_2 = 'logs_discriminator.txt'
     print('\nStarting Discriminator Training...')
     dis_optimizer = optim.Adagrad(dis.parameters())
-    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 2, 3, log_file_2)
+    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 2, 1, log_file_2)
 
+    print("Saving pretrained discriminator model")
     torch.save(dis.state_dict(), pretrained_dis_path)
     #dis.load_state_dict(torch.load(pretrained_dis_path))
 
@@ -262,21 +273,26 @@ if __name__ == '__main__':
 
     print('\nInitial Oracle Sample Loss : %.4f' % oracle_loss)
 
-    log_file_3 = 'gan.txt'
+    log_file_3 = 'logs_gan.txt'
     for epoch in range(ADV_TRAIN_EPOCHS):
         with open(log_file_3, "a") as writer:
             print('\n--------\nEPOCH %d\n--------' % (epoch+1), file=writer)
-            # TRAIN GENERATOR
             print('\nAdversarial Training Generator : ', end='', file=writer)
+        print('\n--------\nEPOCH %d\n--------' % (epoch + 1))
+        # TRAIN GENERATOR
+        print('\nAdversarial Training Generator : ', end='')
         sys.stdout.flush()
         train_generator_PG(gen, gen_optimizer, oracle, dis, 1, log_file_3)
 
         # TRAIN DISCRIMINATOR
         with open(log_file_3, "a") as writer:
-            print('\nAdversarial Training Discriminator : ', file=log_file_3)
-        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 5, 3, log_file_3)
-        torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
-        torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
+            print('\nAdversarial Training Discriminator : ', file=writer)
+            print('\nAdversarial Training Discriminator : ')
+
+        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 1, 1, log_file_3)
+    print("Saving adversarial models")
+    torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
+    torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
 
 
 
@@ -289,5 +305,5 @@ if __name__ == '__main__':
                 build += inv_vocab[sentences[i][j].item()] + ' '
                 # print(inv_vocab[sentences[i][j].item()], end=' ')
             build += '\n'
-
+            print(build)
             print(build, file=writer)
