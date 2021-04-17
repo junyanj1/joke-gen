@@ -27,13 +27,14 @@ for filename in sorted(["reddit_jokes.json"]):
             s = x.get("body").strip()
             s = t+'. '+s
             s = clean_str(s)
+            s = s.lower()
             l = len(s.split())
             if l > 30:
                 overflow+=1
                 continue
 
             lens.append(l)
-            fout.write("\"{}\",\"{}\"".format(id, s))
+            fout.write("{},{}".format(id, s))
             fout.write('\n')
             id += 1
             # if id > 100:
@@ -45,12 +46,13 @@ for filename in sorted(["wocka.json", "stupidstuff.json"]):
             s = x.get("body").strip().replace('\n', ' ')
             s = s.replace('\"', '')
             s = clean_str(s)
+            s = s.lower()
             l = len(s.split())
             if l > 30:
                 overflow += 1
                 continue
             lens.append(l)
-            fout.write("\"{}\",\"{}\"".format(id, s))
+            fout.write("{},{}".format(id, s))
 
             #fout.write("{},{}".format(id, s))
             fout.write('\n')

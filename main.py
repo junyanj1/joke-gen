@@ -21,8 +21,8 @@ VOCAB_SIZE = 5000
 MAX_SEQ_LEN = 30
 START_LETTER = 0
 BATCH_SIZE = 32
-MLE_TRAIN_EPOCHS = 4   # 100
-ADV_TRAIN_EPOCHS = 4   # 50
+MLE_TRAIN_EPOCHS = 2   # 100
+ADV_TRAIN_EPOCHS = 2   # 50
 POS_NEG_SAMPLES = 1000  # 10000
 
 GEN_EMBEDDING_DIM = 32
@@ -32,9 +32,11 @@ DIS_HIDDEN_DIM = 64
 
 # oracle_samples_path = './oracle_samples.trc'
 # oracle_state_dict_path = './oracle_EMBDIM32_HIDDENDIM32_VOCAB5000_MAXSEQLEN20.trc'
-# pretrained_gen_path = './gen_MLEtrain_EMBDIM32_HIDDENDIM32_VOCAB5000_MAXSEQLEN20.trc'
+#pretrained_gen_path = './gen_MLEtrain_EMBDIM32_HIDDENDIM32_VOCAB5000_MAXSEQLEN20.trc'
 # pretrained_dis_path = './dis_pretrain_EMBDIM_64_HIDDENDIM64_VOCAB5000_MAXSEQLEN20.trc'
 
+pretrained_gen_path = 'generator.pt'
+pretrained_dis_path = 'discriminator.pt'
 
 
 class JokeDataset(torch.utils.data.Dataset):
@@ -79,6 +81,10 @@ for line in train_iter:
     counter.update(line)
 vocab = tt.vocab.Vocab(counter, min_freq=1)
 
+# for k,v in vocab.stoi.items():
+#     if '.' in k:
+#         print(k)
+
 text_pipeline = lambda x: [vocab[token] for token in x]
 
 def collate_batch(batch):
@@ -91,67 +97,25 @@ def collate_batch(batch):
 
 train_loader = torch.utils.data.DataLoader(train_iter, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collate_batch)
 
-
-#
-# src = tt.legacy.data.Field(tokenize=tt.data.utils.get_tokenizer("basic_english"),
-#                     fix_length=MAX_SEQ_LEN,
-#                     lower=True)
-#
-# dataset = tt.legacy.data.TabularDataset(
-#     path='jokes.csv', format='csv',
-#     fields=[('id', None), ('text', src)])
-#
-# src.build_vocab(dataset, max_size=VOCAB_SIZE)
-#
-# src_itr = tt.legacy.data.BucketIterator(dataset=dataset,
-#                                  batch_size=BATCH_SIZE,
-#                                  sort_key=lambda x: len(x.text))
-#                                #  device=torch.device("cuda:0"))
-#
-#
-# class BatchLoader:
-#     def __init__(self, dl, x_field):
-#         self.dl, self.x_field = dl, x_field
-#
-#     def __len__(self):
-#         return len(self.dl)
-#
-#     def __iter__(self):
-#         for batch in self.dl:
-#             x = getattr(batch, self.x_field)
-#             print(batch)
-#             # print("JUST X", x)
-#             # print()
-#             # print("Xdot t", x.t())
-#             yield x.t()
-#
-#
-# train_loader = BatchLoader(src_itr, 'text')
-
-vocab_max = 0
-for i, batch in enumerate(train_loader):
-    _max = torch.max(batch)
-    if _max > vocab_max:
-        vocab_max = _max
-
-VOCAB_SIZE = vocab_max.item() + 1
+VOCAB_SIZE = len(vocab)
 
 print(VOCAB_SIZE)
 
-inv_vocab = {v: k for k, v in vocab.stoi.items()}
 
+inv_vocab = {v: k for k, v in vocab.stoi.items()}
 # sentence = ['at', 'a', 'dinner', 'party']
 # for w in sentence:
 #     v = vocab[w]
 #     print(v)
 #     print(inv_vocab[v])
 
-def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs):
+def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs, log_file):
     """
     Max Likelihood Pretraining for the generator
     """
     for epoch in range(epochs):
-        print('epoch %d : ' % (epoch + 1), end='')
+        with open(log_file, "a") as writer:
+            print('epoch %d : ' % (epoch + 1), end='', file=writer)
         sys.stdout.flush()
         total_loss = 0
 
@@ -176,12 +140,12 @@ def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs):
         # sample from generator and compute oracle NLL
         oracle_loss = helpers.batchwise_oracle_nll(gen, oracle, POS_NEG_SAMPLES, BATCH_SIZE, MAX_SEQ_LEN,
                                                    start_letter=START_LETTER, gpu=CUDA)
+        with open(log_file, "a") as writer:
+            print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss), file=writer)
+    #torch.save(gen, 'netG_MLE.pt')
 
-        print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss))
-    torch.save(gen, 'netG_MLE.pt')
 
-
-def train_generator_PG(gen, gen_opt, oracle, dis, num_batches):
+def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='gan.txt'):
     """
     The generator is trained using policy gradients, using the reward from the discriminator.
     Training is done for num_batches batches.
@@ -201,12 +165,14 @@ def train_generator_PG(gen, gen_opt, oracle, dis, num_batches):
     oracle_loss = helpers.batchwise_oracle_nll(gen, oracle, POS_NEG_SAMPLES, BATCH_SIZE, MAX_SEQ_LEN,
                                                    start_letter=START_LETTER, gpu=CUDA)
 
-    print(' oracle_sample_NLL = %.4f' % oracle_loss)
-    torch.save(gen, 'netG_RL.pt')
-    torch.save(dis, 'netD_RL.pt')
+    with open(log_file, "a") as writer:
+        print(' oracle_sample_NLL = %.4f' % oracle_loss, file=writer)
+
+    #torch.save(gen, 'netG_RL.pt')
+    #torch.save(dis, 'netD_RL.pt')
 
 
-def train_discriminator(discriminator, dis_opt, real_data_samples, generator, oracle, d_steps, epochs):
+def train_discriminator(discriminator, dis_opt, real_data_samples, generator, oracle, d_steps, epochs, log_file):
     """
     Training the discriminator on real_data_samples (positive) and generated samples from generator (negative).
     Samples are drawn d_steps times, and the discriminator is trained for epochs epochs.
@@ -220,7 +186,8 @@ def train_discriminator(discriminator, dis_opt, real_data_samples, generator, or
     for d_step in range(d_steps):
         s = helpers.batchwise_sample(generator, POS_NEG_SAMPLES, BATCH_SIZE)
         for epoch in range(epochs):
-            print('d-step %d epoch %d : ' % (d_step + 1, epoch + 1), end='')
+            with open(log_file, "a") as writer:
+                print('d-step %d epoch %d : ' % (d_step + 1, epoch + 1), end='', file=writer)
             sys.stdout.flush()
             total_loss = 0
             total_acc = 0
@@ -246,9 +213,10 @@ def train_discriminator(discriminator, dis_opt, real_data_samples, generator, or
             total_acc /= float(2 * POS_NEG_SAMPLES)
 
             val_pred = discriminator.batchClassify(val_inp)
-            print(' average_loss = %.4f, train_acc = %.4f, val_acc = %.4f' % (
-                total_loss, total_acc, torch.sum((val_pred>0.5)==(val_target>0.5)).data.item()/200.))
-    torch.save(dis, 'netD_dis.pt')
+            with open(log_file, "a") as writer:
+                print(' average_loss = %.4f, train_acc = %.4f, val_acc = %.4f' % (
+                    total_loss, total_acc, torch.sum((val_pred>0.5)==(val_target>0.5)).data.item()/200.), file=writer)
+    #torch.save(dis, 'netD_dis.pt')
 
 
 # MAIN
@@ -268,43 +236,58 @@ if __name__ == '__main__':
         dis = dis.cuda()
         # oracle_samples = oracle_samples.cuda()
 
+
+    log_file_1 = 'generator.txt'
     # GENERATOR MLE TRAINING
     print('Starting Generator MLE Training...')
     gen_optimizer = optim.Adam(gen.parameters(), lr=1e-2)
-    train_generator_MLE(gen, gen_optimizer, oracle, train_loader, MLE_TRAIN_EPOCHS)
+    train_generator_MLE(gen, gen_optimizer, oracle, train_loader, MLE_TRAIN_EPOCHS, log_file_1)
 
-    # torch.save(gen.state_dict(), pretrained_gen_path)
-    # gen.load_state_dict(torch.load(pretrained_gen_path))
+    torch.save(gen.state_dict(), pretrained_gen_path)
+    #gen.load_state_dict(torch.load(pretrained_gen_path))
 
     # PRETRAIN DISCRIMINATOR
+    log_file_2 = 'discriminator.txt'
     print('\nStarting Discriminator Training...')
     dis_optimizer = optim.Adagrad(dis.parameters())
-    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 50, 3)
+    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 2, 3, log_file_2)
 
-    # torch.save(dis.state_dict(), pretrained_dis_path)
-    # dis.load_state_dict(torch.load(pretrained_dis_path))
+    torch.save(dis.state_dict(), pretrained_dis_path)
+    #dis.load_state_dict(torch.load(pretrained_dis_path))
 
     # ADVERSARIAL TRAINING
     print('\nStarting Adversarial Training...')
     oracle_loss = helpers.batchwise_oracle_nll(gen, oracle, POS_NEG_SAMPLES, BATCH_SIZE, MAX_SEQ_LEN,
                                                start_letter=START_LETTER, gpu=CUDA)
+
     print('\nInitial Oracle Sample Loss : %.4f' % oracle_loss)
 
+    log_file_3 = 'gan.txt'
     for epoch in range(ADV_TRAIN_EPOCHS):
-        print('\n--------\nEPOCH %d\n--------' % (epoch+1))
-        # TRAIN GENERATOR
-        print('\nAdversarial Training Generator : ', end='')
+        with open(log_file_3, "a") as writer:
+            print('\n--------\nEPOCH %d\n--------' % (epoch+1), file=writer)
+            # TRAIN GENERATOR
+            print('\nAdversarial Training Generator : ', end='', file=writer)
         sys.stdout.flush()
-        train_generator_PG(gen, gen_optimizer, oracle, dis, 1)
+        train_generator_PG(gen, gen_optimizer, oracle, dis, 1, log_file_3)
 
         # TRAIN DISCRIMINATOR
-        print('\nAdversarial Training Discriminator : ')
-        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 5, 3)
+        with open(log_file_3, "a") as writer:
+            print('\nAdversarial Training Discriminator : ', file=log_file_3)
+        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 5, 3, log_file_3)
         torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
         torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
 
-    sentences = gen.sample(32)
-    for i in range(sentences.shape[0]):
-        for j in range(sentences.shape[1]):
-            print(inv_vocab[sentences[i][j].item()], end=' ')
-        print('\n')
+
+
+    result_file = 'sentences.txt'
+    sentences = gen.sample(30)
+    build = ""
+    with open(result_file, "w") as writer:
+        for i in range(sentences.shape[0]):
+            for j in range(sentences.shape[1]):
+                build += inv_vocab[sentences[i][j].item()] + ' '
+                # print(inv_vocab[sentences[i][j].item()], end=' ')
+            build += '\n'
+
+            print(build, file=writer)
