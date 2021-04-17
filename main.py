@@ -22,9 +22,9 @@ VOCAB_SIZE = 5000
 MAX_SEQ_LEN = 30
 START_LETTER = 0
 BATCH_SIZE = 32
-MLE_TRAIN_EPOCHS = 1   # 100
-ADV_TRAIN_EPOCHS = 1   # 50
-POS_NEG_SAMPLES = 100  # 10000
+MLE_TRAIN_EPOCHS = 40   # 100
+ADV_TRAIN_EPOCHS = 20   # 50
+POS_NEG_SAMPLES = 5000  # 10000
 
 GEN_EMBEDDING_DIM = 32
 GEN_HIDDEN_DIM = 32
@@ -41,7 +41,6 @@ pretrained_dis_path = 'model_D.pt'
 
 
 class JokeDataset(torch.utils.data.Dataset):
-    """Face Landmarks dataset."""
 
     def __init__(self, csv_file, max_seq_length):
         """
@@ -262,12 +261,14 @@ if __name__ == '__main__':
     torch.save(gen.state_dict(), pretrained_gen_path)
     #gen.load_state_dict(torch.load(pretrained_gen_path))
 
+
+
     # PRETRAIN DISCRIMINATOR
     start_time = time.time()
     log_file_2 = 'logs_discriminator.txt'
     print('\nStarting Discriminator Training...')
     dis_optimizer = optim.Adagrad(dis.parameters())
-    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 1, 1, log_file_2)
+    train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 20, 3, log_file_2)
     with open(log_file_2, "a") as writer:
         total_time = "\nTrain time: {}".format((time.time()-start_time)/3600.)
         print(total_time, file=writer)
@@ -275,6 +276,7 @@ if __name__ == '__main__':
     print("Saving pretrained discriminator model")
     torch.save(dis.state_dict(), pretrained_dis_path)
     #dis.load_state_dict(torch.load(pretrained_dis_path))
+
 
     # ADVERSARIAL TRAINING
     print('\nStarting Adversarial Training...')
@@ -300,18 +302,15 @@ if __name__ == '__main__':
             print('\nAdversarial Training Discriminator : ', file=writer)
             print('\nAdversarial Training Discriminator : ')
 
-        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 1, 1, log_file_3)
+        train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 5, 3, log_file_3)
 
-        print("Saving adversarial models")
-        torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
-        torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
     with open(log_file_3, "a") as writer:
         total_time = "\nTrain time: {}".format((time.time()-start_time)/3600.)
         print(total_time, file=writer)
         print(total_time)
-    # print("Saving adversarial models")
-    # torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
-    # torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
+    print("Saving adversarial models")
+    torch.save(gen, 'netG_adv_{}.pt'.format(ADV_TRAIN_EPOCHS))
+    torch.save(dis, 'netD_adv_{}.pt'.format(ADV_TRAIN_EPOCHS))
 
 
 
