@@ -16,7 +16,7 @@ import helpers
 from collections import Counter
 
 
-CUDA = False
+CUDA = True
 VOCAB_SIZE = 5000
 MAX_SEQ_LEN = 30
 START_LETTER = 0
