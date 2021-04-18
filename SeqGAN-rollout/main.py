@@ -5,7 +5,6 @@ import random
 import math
 
 import argparse
-import tqdm
 
 import numpy as np
 from collections import Counter
@@ -35,17 +34,18 @@ print(opt)
 # Basic Training Paramters
 SEED = 88
 BATCH_SIZE = 64
-TOTAL_BATCH = 200
+TOTAL_BATCH = 40
 GENERATED_NUM = 10000
 POSITIVE_FILE = 'real.data'
 NEGATIVE_FILE = 'gen.data'
 EVAL_FILE = 'eval.data'
+RESULT_FILE = 'jokes_rollout.txt'
 VOCAB_SIZE = 5000
-PRE_EPOCH_NUM = 4
+PRE_EPOCH_NUM = 50
 MAX_SEQ_LEN = 30
 
 if opt.cuda is not None and opt.cuda >= 0:
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0")
     torch.cuda.set_device(device)
     opt.cuda = True
 
@@ -63,24 +63,28 @@ d_dropout = 0.75
 d_num_class = 2
 
 
+def real_data_to_file():
+    #get real data from file
+    tokenizer = tt.data.utils.get_tokenizer("basic_english")
+    train_iter = JokeDataset('../jokes.csv', MAX_SEQ_LEN)
 
-# get real data from file
-# tokenizer = tt.data.utils.get_tokenizer("basic_english")
-# train_iter = JokeDataset('../jokes.csv', MAX_SEQ_LEN)
-#
-# counter = Counter()
-# for line in train_iter:
-#     counter.update(line)
-# vocab = tt.vocab.Vocab(counter, min_freq=1)
-# VOCAB_SIZE = len(vocab)
-#
-# text_pipeline = lambda x: [vocab[token] for token in x]
-#
-# with open(POSITIVE_FILE, 'w') as fout:
-#     for line in train_iter:
-#         string = " ".join([str(n) for n in text_pipeline(line)])
-#         fout.write('%s\n' % string)
+    counter = Counter()
+    for line in train_iter:
+        counter.update(line)
+    vocab = tt.vocab.Vocab(counter, min_freq=1)
+    voc_size = len(vocab)
+    inv_vocab = {v: k for k, v in vocab.stoi.items()}
 
+    text_pipeline = lambda x: [vocab[token] for token in x]
+
+    with open(POSITIVE_FILE, 'w') as fout:
+        for i,line in enumerate(train_iter):
+            if i == 143552:
+                break
+            string = " ".join([str(n) for n in text_pipeline(line)])
+            fout.write('%s\n' % string)
+
+    return inv_vocab, voc_size
 
 
 def generate_samples(model, batch_size, generated_num, output_file):
@@ -165,6 +169,11 @@ def main():
     random.seed(SEED)
     np.random.seed(SEED)
 
+    # Generate real data
+    print('Generating data ...')
+    inv_vocab, VOCAB_SIZE = real_data_to_file()
+    # generate_samples(target_lstm, BATCH_SIZE, GENERATED_NUM, POSITIVE_FILE)
+
     # Define Networks
     generator = Generator(VOCAB_SIZE, g_emb_dim, g_hidden_dim, opt.cuda)
     discriminator = Discriminator(d_num_class, VOCAB_SIZE, d_emb_dim, d_filter_sizes, d_num_filters, d_dropout)
@@ -173,15 +182,14 @@ def main():
         generator = generator.cuda()
         discriminator = discriminator.cuda()
         target_lstm = target_lstm.cuda()
-    # Generate toy data using target lstm
-    print('Generating data ...')
-    generate_samples(target_lstm, BATCH_SIZE, GENERATED_NUM, POSITIVE_FILE)
+
 
     # Load data from file
     gen_data_iter = GenDataIter(POSITIVE_FILE, BATCH_SIZE)
 
     # Pretrain Generator using MLE
-    gen_criterion = nn.NLLLoss(reduction='sum')
+    #gen_criterion = nn.NLLLoss(reduction='sum')
+    gen_criterion = nn.NLLLoss(size_average = False)
     gen_optimizer = optim.Adam(generator.parameters())
     if opt.cuda:
         gen_criterion = gen_criterion.cuda()
@@ -189,23 +197,32 @@ def main():
     for epoch in range(PRE_EPOCH_NUM):
         loss = train_epoch(generator, gen_data_iter, gen_criterion, gen_optimizer)
         print('Epoch [%d] Model Loss: %f'% (epoch, loss))
-        generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE)
-        eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
-        loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
-        print('Epoch [%d] True Loss: %f' % (epoch, loss))
+        with open('log_G_rollout.txt', "a") as writer:
+            print('Epoch [%d] Model Loss: %f'% (epoch, loss), file=writer)
+    # generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE)
+        # eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
+        # loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
+        # print('Epoch [%d] True Loss: %f' % (epoch, loss))
+    torch.save(generator, 'G_rollout.pt')
 
     # Pretrain Discriminator
-    dis_criterion = nn.NLLLoss(reduction='sum')
+    #dis_criterion = nn.NLLLoss(reduction='sum')
+    dis_criterion = nn.NLLLoss(size_average = False)
     dis_optimizer = optim.Adam(discriminator.parameters())
     if opt.cuda:
         dis_criterion = dis_criterion.cuda()
     print('Pretrain Discriminator ...')
-    for epoch in range(5):
+    for epoch in range(20):
         generate_samples(generator, BATCH_SIZE, GENERATED_NUM, NEGATIVE_FILE)
         dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, BATCH_SIZE)
         for _ in range(3):
             loss = train_epoch(discriminator, dis_data_iter, dis_criterion, dis_optimizer)
             print('Epoch [%d], loss: %f' % (epoch, loss))
+            with open('log_D_rollout.txt', "a") as writer:
+                print('Epoch [%d], loss: %f' % (epoch, loss), file=writer)
+    torch.save(generator,'D_rollout.pt')
+
+
     # Adversarial Training
     rollout = Rollout(generator, 0.8)
     print('#####################################################')
@@ -223,6 +240,7 @@ def main():
         dis_criterion = dis_criterion.cuda()
     for total_batch in range(TOTAL_BATCH):
         ## Train the generator for one step
+        print("\nTraining generator for 1 step")
         for it in range(1):
             samples = generator.sample(BATCH_SIZE, g_sequence_len)
             # construct the input to the genrator, add zeros before samples and delete the last column
@@ -243,17 +261,44 @@ def main():
             loss.backward()
             gen_gan_optm.step()
 
-        if total_batch % 1 == 0 or total_batch == TOTAL_BATCH - 1:
-            generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE)
-            eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
-            loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
-            print('Batch [%d] True Loss: %f' % (total_batch, loss))
+        if total_batch % 5 == 0 or total_batch == TOTAL_BATCH - 1:
+            # generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE)
+            # eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
+            # loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
+            # print('Epoch [%d] True Loss: %f' % (total_batch, loss))
+
+            predictions = torch.max(prob, dim=1)[1]
+            predictions = predictions.view(BATCH_SIZE, -1)
+            # print('PRED SHAPE:' , predictions.shape)
+            for each_sen in list(predictions)[:8]:
+                print('Training Output:', [inv_vocab[j.item()] for j in each_sen])
+                with open('log_ADV_rollout.txt', "a") as writer:
+                    print('Epoch [%d] Training Output:' % total_batch, [inv_vocab[j.item()] for j in each_sen], file=writer)
+
         rollout.update_params()
 
-        for _ in range(4):
+        print("\nTraining Discriminator...")
+        for epoch in range(4):
             generate_samples(generator, BATCH_SIZE, GENERATED_NUM, NEGATIVE_FILE)
             dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, BATCH_SIZE)
             for _ in range(2):
                 loss = train_epoch(discriminator, dis_data_iter, dis_criterion, dis_optimizer)
+                print('Epoch [%d] Discriminator Loss: %f' % (epoch, loss))
+                with open('log_ADV_rollout.txt', "a") as writer:
+                    print('Epoch [%d] Discriminator Loss: %f' % (epoch, loss), file=writer)
+    torch.save(generator,'G_adv_rollout.pt')
+    torch.save(discriminator,'D_adv_rollout.pt')
+
+
+    sentences = generator.sample(10000, g_sequence_len)
+    build = ""
+    with open(RESULT_FILE, "w") as writer:
+        for i in range(sentences.shape[0]):
+            for j in range(sentences.shape[1]):
+                build += inv_vocab[sentences[i][j].item()] + ' '
+            build += '\n'
+        print(build)
+        print(build, file=writer)
+
 if __name__ == '__main__':
    main()
