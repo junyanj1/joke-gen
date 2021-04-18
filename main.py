@@ -314,10 +314,10 @@ if __name__ == '__main__':
     #
 
     gen = generator.Generator(GEN_EMBEDDING_DIM, GEN_HIDDEN_DIM, VOCAB_SIZE, MAX_SEQ_LEN, gpu=CUDA)
-    gen.load_state_dict(torch.load('netG_adv_20.pt'))
+    gen = torch.load('netG_adv_20.pt')
 
-    result_file = 'jokes.txt'
-    sentences = gen.sample(1000)
+    result_file = 'jokes_10k.txt'
+    sentences = gen.sample(10000)
     build = ""
     with open(result_file, "w") as writer:
         for i in range(sentences.shape[0]):
