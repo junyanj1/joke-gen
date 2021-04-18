@@ -45,7 +45,8 @@ PRE_EPOCH_NUM = 4
 MAX_SEQ_LEN = 30
 
 if opt.cuda is not None and opt.cuda >= 0:
-    torch.cuda.set_device(opt.cuda)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    torch.cuda.set_device(device)
     opt.cuda = True
 
 # Genrator Parameters
