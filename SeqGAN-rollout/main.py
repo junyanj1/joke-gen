@@ -28,7 +28,7 @@ from dataset import JokeDataset
 # ================== Parameter Definition =================
 
 parser = argparse.ArgumentParser(description='Training Parameter')
-parser.add_argument('--cuda', action='store', default=True, type=int)
+parser.add_argument('--cuda', action='store', default=1, type=int)
 opt = parser.parse_args()
 print(opt)
 
