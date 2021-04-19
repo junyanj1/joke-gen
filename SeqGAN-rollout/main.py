@@ -176,6 +176,7 @@ def main():
 
     # Define Networks
     generator = Generator(VOCAB_SIZE, g_emb_dim, g_hidden_dim, opt.cuda)
+    generator = torch.load('G_rollout.pt')
     discriminator = Discriminator(d_num_class, VOCAB_SIZE, d_emb_dim, d_filter_sizes, d_num_filters, d_dropout)
     target_lstm = TargetLSTM(VOCAB_SIZE, g_emb_dim, g_hidden_dim, opt.cuda)
     if opt.cuda:
@@ -203,7 +204,7 @@ def main():
         # eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
         # loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
         # print('Epoch [%d] True Loss: %f' % (epoch, loss))
-    torch.save(generator, 'G_rollout.pt')
+    torch.save(generator, 'G_rollout_50_to_100.pt')
 
     # Pretrain Discriminator
     #dis_criterion = nn.NLLLoss(reduction='sum')

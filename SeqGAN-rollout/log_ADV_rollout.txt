@@ -1,0 +1,392 @@
+Epoch [0] Training Output: ['what', 'm', 'to', 'make', 'a', 'a', 'joke', '.', '!', '!', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'first', 'friend', 'to', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'time', 'day', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'do', 'you', 'know', 'a', 'blonde', '?', '.', 'a', 'can', 'his', 'pin', 'seconds', '.', 'the', 'other', 'were', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'a', '<pad>', 'new', '.', '.', '.', 'was', 'he', 'he', 'could', 'had', 'the', 'first', '.', '.', '<pad>', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'do', 'you', 'call', 'a', 'pizza', 'eastern', 'a', 'black', '?', '.', 'a', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Training Output: ['what', 'hear', 'this', 'joke', 'and', 'the', 'a', 'years', 'of', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.001598
+Epoch [0] Discriminator Loss: 1.010224
+Epoch [1] Discriminator Loss: 1.000877
+Epoch [1] Discriminator Loss: 1.008789
+Epoch [2] Discriminator Loss: 1.001868
+Epoch [2] Discriminator Loss: 1.008693
+Epoch [3] Discriminator Loss: 1.001455
+Epoch [3] Discriminator Loss: 1.011267
+Epoch [0] Discriminator Loss: 1.001399
+Epoch [0] Discriminator Loss: 1.008126
+Epoch [1] Discriminator Loss: 1.001623
+Epoch [1] Discriminator Loss: 1.009863
+Epoch [2] Discriminator Loss: 1.000882
+Epoch [2] Discriminator Loss: 1.007839
+Epoch [3] Discriminator Loss: 1.000931
+Epoch [3] Discriminator Loss: 1.008907
+Epoch [0] Discriminator Loss: 1.000922
+Epoch [0] Discriminator Loss: 1.007951
+Epoch [1] Discriminator Loss: 1.001289
+Epoch [1] Discriminator Loss: 1.008594
+Epoch [2] Discriminator Loss: 1.000956
+Epoch [2] Discriminator Loss: 1.007219
+Epoch [3] Discriminator Loss: 1.001782
+Epoch [3] Discriminator Loss: 1.008166
+Epoch [0] Discriminator Loss: 1.001128
+Epoch [0] Discriminator Loss: 1.008142
+Epoch [1] Discriminator Loss: 1.001266
+Epoch [1] Discriminator Loss: 1.008115
+Epoch [2] Discriminator Loss: 1.001041
+Epoch [2] Discriminator Loss: 1.007238
+Epoch [3] Discriminator Loss: 1.001281
+Epoch [3] Discriminator Loss: 1.008426
+Epoch [0] Discriminator Loss: 1.001632
+Epoch [0] Discriminator Loss: 1.008958
+Epoch [1] Discriminator Loss: 1.001375
+Epoch [1] Discriminator Loss: 1.008112
+Epoch [2] Discriminator Loss: 1.001068
+Epoch [2] Discriminator Loss: 1.007560
+Epoch [3] Discriminator Loss: 1.001379
+Epoch [3] Discriminator Loss: 1.007213
+Epoch [5] Training Output: ['what', 'did', 'the', 'chicken', 't', 'ticketed', 'to', 'so', 'the', 'party', '?', '.', 'because', 'intelligence', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'food', '.', 'a', 'girlfriend', '.', '.', 'people', 'are', 'like', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'do', 'the', 'difference', 'with', 'no', 'legs', 'to', '?', '?', '.', 'a', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'm', 'my', 'to', 'to', 'like', 'that', 'the', 'this', 'morning', '?', '.', '.', '.', 'but', 'm', 'not', 'sure', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'man', 'walks', 'into', 'a', 'bar', '.', '.', 'bartender', 'bear', 'and', 'a', 'in', '1', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'do', 'a', 'man', 'and', 'name', 'a', 'in', 'common', 'canoe', '?', '.', 'a', 'paragraph', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'are', 'red', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [5] Training Output: ['what', 'do', 'the', 'lennon', 'the', '?', '.', 'kick', 'the', 'he', 's', 'a', 'little', '<pad>', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.000714
+Epoch [0] Discriminator Loss: 1.006772
+Epoch [1] Discriminator Loss: 1.001532
+Epoch [1] Discriminator Loss: 1.009853
+Epoch [2] Discriminator Loss: 1.001353
+Epoch [2] Discriminator Loss: 1.007587
+Epoch [3] Discriminator Loss: 1.000785
+Epoch [3] Discriminator Loss: 1.008405
+Epoch [0] Discriminator Loss: 1.001252
+Epoch [0] Discriminator Loss: 1.008311
+Epoch [1] Discriminator Loss: 1.001259
+Epoch [1] Discriminator Loss: 1.007942
+Epoch [2] Discriminator Loss: 1.000621
+Epoch [2] Discriminator Loss: 1.006997
+Epoch [3] Discriminator Loss: 1.001070
+Epoch [3] Discriminator Loss: 1.008235
+Epoch [0] Discriminator Loss: 1.000741
+Epoch [0] Discriminator Loss: 1.007638
+Epoch [1] Discriminator Loss: 1.000940
+Epoch [1] Discriminator Loss: 1.006881
+Epoch [2] Discriminator Loss: 1.000770
+Epoch [2] Discriminator Loss: 1.006649
+Epoch [3] Discriminator Loss: 1.001589
+Epoch [3] Discriminator Loss: 1.008026
+Epoch [0] Discriminator Loss: 1.001316
+Epoch [0] Discriminator Loss: 1.007042
+Epoch [1] Discriminator Loss: 1.001268
+Epoch [1] Discriminator Loss: 1.006925
+Epoch [2] Discriminator Loss: 1.000909
+Epoch [2] Discriminator Loss: 1.006724
+Epoch [3] Discriminator Loss: 1.000882
+Epoch [3] Discriminator Loss: 1.006606
+Epoch [0] Discriminator Loss: 1.001751
+Epoch [0] Discriminator Loss: 1.008803
+Epoch [1] Discriminator Loss: 1.001179
+Epoch [1] Discriminator Loss: 1.008548
+Epoch [2] Discriminator Loss: 1.001716
+Epoch [2] Discriminator Loss: 1.009544
+Epoch [3] Discriminator Loss: 1.001280
+Epoch [3] Discriminator Loss: 1.007739
+Epoch [10] Training Output: ['what', 'did', 'the', 'chicken', 'cross', 'the', 'road', '?', '.', 'to', 'get', 'to', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'do', 'the', 'man', 'say', 'say', 'to', 's', 'at', 'of', 'the', 'beds', '?', '.', 'a', '.', 'peele', 'security', 'rape', 'been', 'seen', '<pad>', 'a', 'same', '<pad>', '<pad>', '!', '.', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'do', 'potatoes', 'does', 'is', 'does', 'they', 'have', 'in', 'common', '?', 'they', 'both', 'both', '.', 'drink', 'their', 'own', 'button', '?', '.', 't', 'same', 'gators', 'a', '.', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'year', 'you', 'know', 'a', 'man', 'and', 'a', 'cubes', 'with', '.', 'the', 'little', 'sense', 'in', 'a', 'command', 'man', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'do', 'the', 'tampon', 'say', 'to', 'the', 'other', '?', 'of', '.', 'because', 'she', 'i', 's', 'be', 'to', 'the', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'did', 'the', 'people', 'like', 'take', 'sex', '?', '.', 'because', 'they', 're', 'get', 'of', 'the', 'support', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'the', '<pad>', '.', 'i', 'do', 'the', 'man', 'and', 'a', 'to', 'change', 'a', 'wall', '?', 'a', 'bike', '?', '.', '.', 'me', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [10] Training Output: ['what', 'did', 'the', 'chicken', 'cross', 'say', 'to', 'the', 'the', '.', 'the', 'the', 'field', 'beetle', '<pad>', '.', 'he', 'was', '<pad>', '<pad>', '<pad>', '<pad>', 'you', 'have', 'have', '.', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.002772
+Epoch [0] Discriminator Loss: 1.007248
+Epoch [1] Discriminator Loss: 1.000758
+Epoch [1] Discriminator Loss: 1.006633
+Epoch [2] Discriminator Loss: 1.001813
+Epoch [2] Discriminator Loss: 1.010006
+Epoch [3] Discriminator Loss: 1.001731
+Epoch [3] Discriminator Loss: 1.008123
+Epoch [0] Discriminator Loss: 1.000740
+Epoch [0] Discriminator Loss: 1.006683
+Epoch [1] Discriminator Loss: 1.001208
+Epoch [1] Discriminator Loss: 1.008371
+Epoch [2] Discriminator Loss: 1.001358
+Epoch [2] Discriminator Loss: 1.007704
+Epoch [3] Discriminator Loss: 1.001175
+Epoch [3] Discriminator Loss: 1.007506
+Epoch [0] Discriminator Loss: 1.001658
+Epoch [0] Discriminator Loss: 1.009708
+Epoch [1] Discriminator Loss: 1.002181
+Epoch [1] Discriminator Loss: 1.009592
+Epoch [2] Discriminator Loss: 1.000961
+Epoch [2] Discriminator Loss: 1.007664
+Epoch [3] Discriminator Loss: 1.000670
+Epoch [3] Discriminator Loss: 1.006330
+Epoch [0] Discriminator Loss: 1.000868
+Epoch [0] Discriminator Loss: 1.006895
+Epoch [1] Discriminator Loss: 1.000913
+Epoch [1] Discriminator Loss: 1.007326
+Epoch [2] Discriminator Loss: 1.001899
+Epoch [2] Discriminator Loss: 1.007543
+Epoch [3] Discriminator Loss: 1.002054
+Epoch [3] Discriminator Loss: 1.011244
+Epoch [0] Discriminator Loss: 1.001128
+Epoch [0] Discriminator Loss: 1.006944
+Epoch [1] Discriminator Loss: 1.001579
+Epoch [1] Discriminator Loss: 1.009448
+Epoch [2] Discriminator Loss: 1.001173
+Epoch [2] Discriminator Loss: 1.007871
+Epoch [3] Discriminator Loss: 1.001190
+Epoch [3] Discriminator Loss: 1.007056
+Epoch [15] Training Output: ['what', 'm', 'the', 're', 'up', 'with', 'the', 'car', '.', '.', 'first', 'says', 'dick', 'time', 'out', '.', 'time', '.', '.', 'mom', 'is', 'the', 'least', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [15] Training Output: ['what', 'you', 'heard', 'about', 'one', 'year', 's', 'called', 'a', 'tank', '?', '?', '.', 'the', '<pad>', '<pad>', '<pad>', 'a', 'and', 'the', 'other', 'was', 'in', 'the', 'oven', '.', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [15] Training Output: ['what', 'do', 'you', 'cosby', 'say', 'the', 'a', 'new', '?', 'a', 's', 'up', 'same', '?', 'a', 'a', 'of', 'the', '?', '.', '<pad>', 's', 'r', '.', '<pad>', '.', '<pad>', 's', 'goodyear', '.']
+Epoch [15] Training Output: ['what', 'man', 'bucks', 'dog', 'and', 'a', 'ledger', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [15] Training Output: ['what', 'do', 'defines', 's', '?', 'i', 'of', 'the', 's', 'trump', 's', 's', '.', '<pad>', 'm', 't', 'know', 'i', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [15] Training Output: ['what', 'do', 'a', 'man', 'and', 'when', 'he', 's', 'to', 'the', 'one', '.', '.', '.', 'of', 'them', 'clinton', 'and', 'a', 'off', 'the', 'and', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [15] Training Output: ['what', 'do', 'the', 'difference', 'way', 'about', 'the', 'and', 'and', '?', 'a', 'prostitute', '?', 'the', 'other', '?', '?', 'the', 'tractor', '?', '.', 'he', 'm', 'him', 'to', 'get', 'her', 'face', '.', '<unk>']
+Epoch [15] Training Output: ['what', 'you', 'hear', 'the', 'new', 'of', 'the', 'black', '?', 'camping', '?', '.', 'he', 'did', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.000860
+Epoch [0] Discriminator Loss: 1.007139
+Epoch [1] Discriminator Loss: 1.001496
+Epoch [1] Discriminator Loss: 1.009815
+Epoch [2] Discriminator Loss: 1.002223
+Epoch [2] Discriminator Loss: 1.012402
+Epoch [3] Discriminator Loss: 1.001343
+Epoch [3] Discriminator Loss: 1.006825
+Epoch [0] Discriminator Loss: 1.002208
+Epoch [0] Discriminator Loss: 1.011219
+Epoch [1] Discriminator Loss: 1.001546
+Epoch [1] Discriminator Loss: 1.010734
+Epoch [2] Discriminator Loss: 1.002281
+Epoch [2] Discriminator Loss: 1.007258
+Epoch [3] Discriminator Loss: 1.001737
+Epoch [3] Discriminator Loss: 1.009392
+Epoch [0] Discriminator Loss: 1.001427
+Epoch [0] Discriminator Loss: 1.010093
+Epoch [1] Discriminator Loss: 1.001555
+Epoch [1] Discriminator Loss: 1.009149
+Epoch [2] Discriminator Loss: 1.002131
+Epoch [2] Discriminator Loss: 1.010211
+Epoch [3] Discriminator Loss: 1.002683
+Epoch [3] Discriminator Loss: 1.015182
+Epoch [0] Discriminator Loss: 1.001756
+Epoch [0] Discriminator Loss: 1.008598
+Epoch [1] Discriminator Loss: 1.001147
+Epoch [1] Discriminator Loss: 1.007124
+Epoch [2] Discriminator Loss: 1.002146
+Epoch [2] Discriminator Loss: 1.013552
+Epoch [3] Discriminator Loss: 1.002249
+Epoch [3] Discriminator Loss: 1.011871
+Epoch [0] Discriminator Loss: 1.002283
+Epoch [0] Discriminator Loss: 1.010685
+Epoch [1] Discriminator Loss: 1.000807
+Epoch [1] Discriminator Loss: 1.006599
+Epoch [2] Discriminator Loss: 1.001175
+Epoch [2] Discriminator Loss: 1.007508
+Epoch [3] Discriminator Loss: 1.001519
+Epoch [3] Discriminator Loss: 1.008062
+Epoch [20] Training Output: ['what', 'did', 'the', 'chicken', 'man', 'go', 'in', 'out', '?', '.', 'because', 'was', 'the', 'little', 'panzer', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', 'do', 'the', 'difference', 'between', 'a', 'oral', 'thermometer', 'and', 'a', 'joke', '?', 'joke', '?', '.', 'you', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', 'since', 'to', 'a', 'years', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', '.', '.', 'a', 'you', 'negatives', '.', 'the', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', 'm', 'going', 'to', 'make', 'a', 'joke', 'of', '.', '.', 'i', 'have', 'to', 'be', 'a', 'girl', 'of', '.', 'of', 'them', '.', '<pad>', 's', 'the', 'good', 'much', '<pad>', 'the', '<pad>', 'say']
+Epoch [20] Training Output: ['what', 'performance', 'revealed', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', 'do', 'the', 'difference', 'between', 'a', 'a', 'prostitute', 'and', 'a', 'wheelchair', '.', 'and', 'wife', 'is', 're', 'out', 'pin', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [20] Training Output: ['what', 'do', 'you', 'know', 'if', 'you', 's', 'a', 'girl', 'who', 'a', 'wife', '.', '.', 'a', 'one', '.', 'a', 'a', 'one', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.001901
+Epoch [0] Discriminator Loss: 1.006680
+Epoch [1] Discriminator Loss: 1.001386
+Epoch [1] Discriminator Loss: 1.008506
+Epoch [2] Discriminator Loss: 1.001666
+Epoch [2] Discriminator Loss: 1.008433
+Epoch [3] Discriminator Loss: 1.001243
+Epoch [3] Discriminator Loss: 1.007323
+Epoch [0] Discriminator Loss: 1.006638
+Epoch [0] Discriminator Loss: 1.012155
+Epoch [1] Discriminator Loss: 1.001144
+Epoch [1] Discriminator Loss: 1.010242
+Epoch [2] Discriminator Loss: 1.002175
+Epoch [2] Discriminator Loss: 1.010535
+Epoch [3] Discriminator Loss: 1.001787
+Epoch [3] Discriminator Loss: 1.012990
+Epoch [0] Discriminator Loss: 1.001112
+Epoch [0] Discriminator Loss: 1.007408
+Epoch [1] Discriminator Loss: 1.001834
+Epoch [1] Discriminator Loss: 1.014221
+Epoch [2] Discriminator Loss: 1.001377
+Epoch [2] Discriminator Loss: 1.008892
+Epoch [3] Discriminator Loss: 1.001739
+Epoch [3] Discriminator Loss: 1.007549
+Epoch [0] Discriminator Loss: 1.002863
+Epoch [0] Discriminator Loss: 1.008164
+Epoch [1] Discriminator Loss: 1.001160
+Epoch [1] Discriminator Loss: 1.006976
+Epoch [2] Discriminator Loss: 1.000956
+Epoch [2] Discriminator Loss: 1.006632
+Epoch [3] Discriminator Loss: 1.000901
+Epoch [3] Discriminator Loss: 1.007049
+Epoch [0] Discriminator Loss: 1.001127
+Epoch [0] Discriminator Loss: 1.007304
+Epoch [1] Discriminator Loss: 1.001615
+Epoch [1] Discriminator Loss: 1.007779
+Epoch [2] Discriminator Loss: 1.000969
+Epoch [2] Discriminator Loss: 1.007066
+Epoch [3] Discriminator Loss: 1.002051
+Epoch [3] Discriminator Loss: 1.010463
+Epoch [25] Training Output: ['what', 'the', 'difference', 'between', '.', 'a', 'on', 'my', 'organ', '.', 'on', 'a', 'moon', '?', 'in', 'the', '.', '.', '.', 'it', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'hear', 'a', 'new', '.', 'a', 'wife', '.', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'what', 're', 'be', 'a', 'joke', 'for', 'a', '.', 'years', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'do', 'does', 'a', 'man', 'drink', 'of', 'a', 'phrase', '?', '.', 'a', 'into', 'a', 'a', 'joke', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'm', 'about', 'cyrus', '.', 'first', 'a', '.', 'a', 'with', 'a', '.', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'do', 'the', 'difference', 'between', 'a', 'oral', 'and', 'favorite', 'and', 'a', 'chickpea', '?', '.', 'a', 'cymbal', '<pad>', 'spangled', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', 'you', 'hear', 'about', 'the', 'guy', 'corduroy', '?', 'at', 'at', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [25] Training Output: ['what', '.', 'i', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.006439
+Epoch [0] Discriminator Loss: 1.008885
+Epoch [1] Discriminator Loss: 1.001368
+Epoch [1] Discriminator Loss: 1.007800
+Epoch [2] Discriminator Loss: 1.000937
+Epoch [2] Discriminator Loss: 1.006851
+Epoch [3] Discriminator Loss: 1.000890
+Epoch [3] Discriminator Loss: 1.008219
+Epoch [0] Discriminator Loss: 1.001079
+Epoch [0] Discriminator Loss: 1.007324
+Epoch [1] Discriminator Loss: 1.001483
+Epoch [1] Discriminator Loss: 1.008623
+Epoch [2] Discriminator Loss: 1.001797
+Epoch [2] Discriminator Loss: 1.010101
+Epoch [3] Discriminator Loss: 1.001284
+Epoch [3] Discriminator Loss: 1.006676
+Epoch [0] Discriminator Loss: 1.001261
+Epoch [0] Discriminator Loss: 1.006343
+Epoch [1] Discriminator Loss: 1.002866
+Epoch [1] Discriminator Loss: 1.010244
+Epoch [2] Discriminator Loss: 1.000902
+Epoch [2] Discriminator Loss: 1.007495
+Epoch [3] Discriminator Loss: 1.001002
+Epoch [3] Discriminator Loss: 1.006673
+Epoch [0] Discriminator Loss: 1.002165
+Epoch [0] Discriminator Loss: 1.010059
+Epoch [1] Discriminator Loss: 1.001104
+Epoch [1] Discriminator Loss: 1.006667
+Epoch [2] Discriminator Loss: 1.001404
+Epoch [2] Discriminator Loss: 1.007014
+Epoch [3] Discriminator Loss: 1.000756
+Epoch [3] Discriminator Loss: 1.006288
+Epoch [0] Discriminator Loss: 1.000794
+Epoch [0] Discriminator Loss: 1.006781
+Epoch [1] Discriminator Loss: 1.000934
+Epoch [1] Discriminator Loss: 1.006714
+Epoch [2] Discriminator Loss: 1.000901
+Epoch [2] Discriminator Loss: 1.006598
+Epoch [3] Discriminator Loss: 1.000784
+Epoch [3] Discriminator Loss: 1.006469
+Epoch [30] Training Output: ['what', 'do', 'the', 'joke', '<pad>', 'favorite', 'called', 'joke', 'old', 'man', '?', 'favorite', 'get', 'eye', '<pad>', '?', '.', 'he', 'was', 't', 'afford', 'the', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', 'do', 'you', 'know', 'if', 'if', 'you', 'm', 'the', 'flamingo', 'that', '.', 'i', 'm', 'a', 'to', 'get', 'out', '.', '.', '.', '.', 'the', 'was', 'be', 'call', 'to', 'a', 'box', '<pad>']
+Epoch [30] Training Output: ['what', 's', 'a', 'types', 'of', 'people', '.', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', 'was', 'me', 'world', 'of', 'my', '.', '<pad>', 'you', 'a', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', 'man', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', 'i', 'went', 'i', 'me', 'i', 'was', 'my', 'coffee', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', '.', '.', '.', 'the', '.', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [30] Training Output: ['what', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.000679
+Epoch [0] Discriminator Loss: 1.005030
+Epoch [1] Discriminator Loss: 1.001736
+Epoch [1] Discriminator Loss: 1.006611
+Epoch [2] Discriminator Loss: 1.000901
+Epoch [2] Discriminator Loss: 1.006103
+Epoch [3] Discriminator Loss: 1.001216
+Epoch [3] Discriminator Loss: 1.005730
+Epoch [0] Discriminator Loss: 1.001295
+Epoch [0] Discriminator Loss: 1.005916
+Epoch [1] Discriminator Loss: 1.001508
+Epoch [1] Discriminator Loss: 1.005897
+Epoch [2] Discriminator Loss: 1.002207
+Epoch [2] Discriminator Loss: 1.007431
+Epoch [3] Discriminator Loss: 1.000686
+Epoch [3] Discriminator Loss: 1.005727
+Epoch [0] Discriminator Loss: 1.000719
+Epoch [0] Discriminator Loss: 1.005480
+Epoch [1] Discriminator Loss: 1.000729
+Epoch [1] Discriminator Loss: 1.005854
+Epoch [2] Discriminator Loss: 1.000528
+Epoch [2] Discriminator Loss: 1.004459
+Epoch [3] Discriminator Loss: 1.000701
+Epoch [3] Discriminator Loss: 1.009697
+Epoch [0] Discriminator Loss: 1.004114
+Epoch [0] Discriminator Loss: 1.005820
+Epoch [1] Discriminator Loss: 1.001026
+Epoch [1] Discriminator Loss: 1.005831
+Epoch [2] Discriminator Loss: 1.001154
+Epoch [2] Discriminator Loss: 1.005344
+Epoch [3] Discriminator Loss: 1.000711
+Epoch [3] Discriminator Loss: 1.004700
+Epoch [0] Discriminator Loss: 1.000666
+Epoch [0] Discriminator Loss: 1.004403
+Epoch [1] Discriminator Loss: 1.001255
+Epoch [1] Discriminator Loss: 1.007813
+Epoch [2] Discriminator Loss: 1.001221
+Epoch [2] Discriminator Loss: 1.005291
+Epoch [3] Discriminator Loss: 1.000546
+Epoch [3] Discriminator Loss: 1.004189
+Epoch [35] Training Output: ['what', 'girlfriend', '<pad>', 'of', 'shoes', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'do', 'you', 'call', 'a', '.', 'other', 's', '<pad>', '<pad>', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'man', 'walks', 'into', 'a', 'bar', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'do', 'you', 'call', 'a', 'gay', 'with', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'girlfriend', '.', 'found', '.', 'i', 'was', 'a', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'selection', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [35] Training Output: ['what', 'was', 'going', '<pad>', 'm', 'a', 'preoccupation', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.000494
+Epoch [0] Discriminator Loss: 1.003723
+Epoch [1] Discriminator Loss: 1.002162
+Epoch [1] Discriminator Loss: 1.007078
+Epoch [2] Discriminator Loss: 1.000497
+Epoch [2] Discriminator Loss: 1.003948
+Epoch [3] Discriminator Loss: 1.000651
+Epoch [3] Discriminator Loss: 1.004901
+Epoch [0] Discriminator Loss: 1.005068
+Epoch [0] Discriminator Loss: 1.003447
+Epoch [1] Discriminator Loss: 1.000347
+Epoch [1] Discriminator Loss: 1.002833
+Epoch [2] Discriminator Loss: 1.003243
+Epoch [2] Discriminator Loss: 1.004928
+Epoch [3] Discriminator Loss: 1.000939
+Epoch [3] Discriminator Loss: 1.003927
+Epoch [0] Discriminator Loss: 1.000871
+Epoch [0] Discriminator Loss: 1.002953
+Epoch [1] Discriminator Loss: 1.000233
+Epoch [1] Discriminator Loss: 1.002824
+Epoch [2] Discriminator Loss: 1.000529
+Epoch [2] Discriminator Loss: 1.002515
+Epoch [3] Discriminator Loss: 1.000747
+Epoch [3] Discriminator Loss: 1.003579
+Epoch [0] Discriminator Loss: 1.000844
+Epoch [0] Discriminator Loss: 1.003050
+Epoch [1] Discriminator Loss: 1.000474
+Epoch [1] Discriminator Loss: 1.002251
+Epoch [2] Discriminator Loss: 1.000817
+Epoch [2] Discriminator Loss: 1.002863
+Epoch [3] Discriminator Loss: 1.001335
+Epoch [3] Discriminator Loss: 1.002069
+Epoch [39] Training Output: ['kerbal', 'that', '<pad>', 'be', 'you', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', 'and', 'world', 'different', '.', '<pad>', '.', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', 'takei', 'was', 'in', 'the', 'the', 'movie', '<pad>', 'blasphemous', 'day', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', 'takei', 'knock”', 'himself', '<pad>', 'a', 'was', 'a', '<pad>', '<pad>', 'a', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', 'arabia', '.', 'are', 'so', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', '.', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [39] Training Output: ['kerbal', 'com', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>', '<pad>']
+Epoch [0] Discriminator Loss: 1.000420
+Epoch [0] Discriminator Loss: 1.001254
+Epoch [1] Discriminator Loss: 1.000411
+Epoch [1] Discriminator Loss: 1.002165
+Epoch [2] Discriminator Loss: 1.001280
+Epoch [2] Discriminator Loss: 1.001619
+Epoch [3] Discriminator Loss: 1.007436
+Epoch [3] Discriminator Loss: 1.003551
