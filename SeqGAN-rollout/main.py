@@ -34,12 +34,12 @@ print(opt)
 # Basic Training Paramters
 SEED = 88
 BATCH_SIZE = 64
-TOTAL_BATCH = 1
+TOTAL_BATCH = 30
 GENERATED_NUM = 10000
 POSITIVE_FILE = 'real.data'
 NEGATIVE_FILE = 'gen.data'
 EVAL_FILE = 'eval.data'
-RESULT_FILE = 'jokes_rollout2.txt'
+RESULT_FILE = 'jokes_rollout3.txt'
 #VOCAB_SIZE = 5000
 PRE_EPOCH_NUM = 50
 MAX_SEQ_LEN = 30
@@ -114,7 +114,7 @@ def train_epoch(model, data_iter, criterion, optimizer):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        print("loss: {}".format(loss))
+        #print("loss: {}".format(loss))
     data_iter.reset()
     return math.exp(total_loss / total_words)
 
@@ -217,7 +217,7 @@ def main():
     if opt.cuda:
         dis_criterion = dis_criterion.cuda()
     print('Pretrain Discriminator ...')
-    for epoch in range(1):
+    for epoch in range(25):
         generate_samples(generator, BATCH_SIZE, GENERATED_NUM, NEGATIVE_FILE)
         dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, BATCH_SIZE)
         for _ in range(3):
@@ -284,7 +284,7 @@ def main():
         rollout.update_params()
 
         print("\nTraining Discriminator...")
-        for epoch in range(1):
+        for epoch in range(5):
             generate_samples(generator, BATCH_SIZE, GENERATED_NUM, NEGATIVE_FILE)
             dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, BATCH_SIZE)
             for _ in range(3):
