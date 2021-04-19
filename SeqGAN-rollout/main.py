@@ -245,7 +245,7 @@ def main():
         dis_criterion = dis_criterion.cuda()
     for total_batch in range(TOTAL_BATCH):
         ## Train the generator for one step
-        print("\nTraining generator for 1 step")
+        print("\n[{}] Training generator for 1 step".format(total_batch))
         for it in range(1):
             samples = generator.sample(BATCH_SIZE*2, g_sequence_len)
             # construct the input to the genrator, add zeros before samples and delete the last column
