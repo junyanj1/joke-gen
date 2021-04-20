@@ -38,3 +38,6 @@ typing-extensions==3.7.4.3
 urllib3==1.26.4
 wasabi==0.8.2
 torchtext==0.9.1
+tensorflow==2.4.0
+fast-bleu==0.0.89
+fastbleu==0.0.41
