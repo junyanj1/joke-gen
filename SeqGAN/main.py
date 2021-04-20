@@ -33,15 +33,17 @@ VOCAB_SIZE = 5000
 MAX_SEQ_LEN = 20
 START_LETTER = 0
 BATCH_SIZE = 32
-MLE_TRAIN_EPOCHS = 5   # 100
-ADV_TRAIN_EPOCHS = 5   # 50
+MLE_TRAIN_EPOCHS = 1   # 100
+ADV_TRAIN_EPOCHS = 1   # 50
 POS_NEG_SAMPLES = 10000  # 10000
-D_STEPS = 3
+D_STEPS = 1
 
 GEN_EMBEDDING_DIM = 32
 GEN_HIDDEN_DIM = 32
 DIS_EMBEDDING_DIM = 64
 DIS_HIDDEN_DIM = 64
+
+NLL_LOSS_FILE = 'nll_per_epoch.csv'
 
 # oracle_samples_path = './oracle_samples.trc'
 # oracle_state_dict_path = './oracle_EMBDIM32_HIDDENDIM32_VOCAB5000_MAXSEQLEN20.trc'
@@ -105,8 +107,7 @@ def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs, log_fil
 
             total_loss += loss.data.item()
 
-            if (i / BATCH_SIZE) % ceil(
-                            ceil(POS_NEG_SAMPLES / float(BATCH_SIZE)) / 10.) == 0:  # roughly every 10% of an epoch
+            if i % ceil(len(real_data_samples)/10.) == 0:
                 print('.', end='')
                 sys.stdout.flush()
 
@@ -119,11 +120,14 @@ def train_generator_MLE(gen, gen_opt, oracle, real_data_samples, epochs, log_fil
         with open(log_file, "a") as writer:
             print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss), file=writer)
             print(' average_train_NLL = %.4f, oracle_sample_NLL = %.4f' % (total_loss, oracle_loss))
+        with open(NLL_LOSS_FILE, "a") as writer:
+            print("{},{}".format(epoch, oracle_loss), file=writer)
+
 
     #torch.save(gen, 'netG_MLE.pt')
 
 
-def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='logs_gan.txt'):
+def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, epoch, log_file='logs_gan.txt'):
     """
     The generator is trained using policy gradients, using the reward from the discriminator.
     Training is done for num_batches batches.
@@ -146,7 +150,8 @@ def train_generator_PG(gen, gen_opt, oracle, dis, num_batches, log_file='logs_ga
     with open(log_file, "a") as writer:
         print(' oracle_sample_NLL = %.4f' % oracle_loss, file=writer)
         print(' oracle_sample_NLL = %.4f' % oracle_loss)
-
+    with open(NLL_LOSS_FILE, "a") as writer:
+        print("{},{}".format(epoch, oracle_loss), file=writer)
 
     #torch.save(gen, 'netG_RL.pt')
     #torch.save(dis, 'netD_RL.pt')
@@ -188,8 +193,7 @@ def train_discriminator(discriminator, dis_opt, real_data_samples, generator, va
                 total_loss += loss.data.item()
                 total_acc += torch.sum((out>0.5)==(target>0.5)).data.item()
 
-                if (i / BATCH_SIZE) % ceil(ceil(2 * POS_NEG_SAMPLES / float(
-                        BATCH_SIZE)) / 10.) == 0:  # roughly every 10% of an epoch
+                if i % ceil(len(real_data_samples)/10.) == 0:
                     print('.', end='')
                     sys.stdout.flush()
 
@@ -249,7 +253,7 @@ if __name__ == '__main__':
     print('\nStarting Discriminator Training...')
     dis_optimizer = optim.Adagrad(dis.parameters())
     # train_discriminator(dis, dis_optimizer, train_loader, gen, oracle, 20, 3, log_file_2)
-    train_discriminator(dis, dis_optimizer, train_iter, gen, val_loader, D_STEPS, 3, log_file_2)
+    train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, D_STEPS, 3, log_file_2)
 
     with open(log_file_2, "a") as writer:
         total_time = "\nTrain time: {}".format((time.time()-start_time)/3600.)
@@ -277,7 +281,7 @@ if __name__ == '__main__':
         # TRAIN GENERATOR
         print('\nAdversarial Training Generator : ', end='')
         sys.stdout.flush()
-        train_generator_PG(gen, gen_optimizer, gen, dis, 1, log_file_3)
+        train_generator_PG(gen, gen_optimizer, gen, dis, 1, epoch+MLE_TRAIN_EPOCHS, log_file_3)
 
         # TRAIN DISCRIMINATOR
         with open(log_file_3, "a") as writer:
@@ -285,7 +289,7 @@ if __name__ == '__main__':
             print('\nAdversarial Training Discriminator : ')
 
         val_loader = torch.utils.data.DataLoader(val_iter, batch_size=100, shuffle=True, collate_fn=collate_batch)
-        train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, 5, 3, log_file_3)
+        train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, 1, 3, log_file_3)
         # train_discriminator(dis, dis_optimizer, oracle_samples, gen, oracle, 5, 3, log_file_3)
 
 
