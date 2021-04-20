@@ -1,0 +1,902 @@
+
+--------
+EPOCH 1
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2216
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0194, train_acc = 328.5140, val_acc = 0.6000
+d-step 1 epoch 2 :  average_loss = 0.0105, train_acc = 329.0276, val_acc = 0.7300
+d-step 1 epoch 3 :  average_loss = 0.0070, train_acc = 329.2366, val_acc = 0.7350
+d-step 1 epoch 4 :  average_loss = 0.0056, train_acc = 329.3134, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0047, train_acc = 329.3627, val_acc = 0.7400
+d-step 1 epoch 6 :  average_loss = 0.0040, train_acc = 329.3961, val_acc = 0.7350
+d-step 1 epoch 7 :  average_loss = 0.0035, train_acc = 329.4176, val_acc = 0.7450
+d-step 1 epoch 8 :  average_loss = 0.0041, train_acc = 329.3866, val_acc = 0.7550
+d-step 1 epoch 9 :  average_loss = 0.0030, train_acc = 329.4402, val_acc = 0.7250
+d-step 1 epoch 10 :  average_loss = 0.0028, train_acc = 329.4506, val_acc = 0.7350
+
+--------
+EPOCH 2
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1961
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0299, train_acc = 328.3123, val_acc = 0.5000
+d-step 1 epoch 2 :  average_loss = 0.0241, train_acc = 328.5000, val_acc = 0.5000
+d-step 1 epoch 3 :  average_loss = 0.0240, train_acc = 328.5000, val_acc = 0.5000
+d-step 1 epoch 4 :  average_loss = 0.0239, train_acc = 328.5002, val_acc = 0.5000
+d-step 1 epoch 5 :  average_loss = 0.0239, train_acc = 328.5002, val_acc = 0.5000
+d-step 1 epoch 6 :  average_loss = 0.0238, train_acc = 328.5002, val_acc = 0.5000
+d-step 1 epoch 7 :  average_loss = 0.0238, train_acc = 328.5002, val_acc = 0.5000
+d-step 1 epoch 8 :  average_loss = 0.0238, train_acc = 328.5002, val_acc = 0.5000
+d-step 1 epoch 9 :  average_loss = 0.0237, train_acc = 328.5004, val_acc = 0.5000
+d-step 1 epoch 10 :  average_loss = 0.0237, train_acc = 328.5005, val_acc = 0.5000
+
+--------
+EPOCH 3
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2098
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0236, train_acc = 328.4994, val_acc = 0.5000
+d-step 1 epoch 2 :  average_loss = 0.0236, train_acc = 328.5008, val_acc = 0.5000
+d-step 1 epoch 3 :  average_loss = 0.0236, train_acc = 328.5015, val_acc = 0.5000
+d-step 1 epoch 4 :  average_loss = 0.0235, train_acc = 328.5027, val_acc = 0.5000
+d-step 1 epoch 5 :  average_loss = 0.0232, train_acc = 328.5147, val_acc = 0.5100
+d-step 1 epoch 6 :  average_loss = 0.0220, train_acc = 328.5670, val_acc = 0.5200
+d-step 1 epoch 7 :  average_loss = 0.0206, train_acc = 328.6318, val_acc = 0.5200
+d-step 1 epoch 8 :  average_loss = 0.0193, train_acc = 328.6980, val_acc = 0.5900
+d-step 1 epoch 9 :  average_loss = 0.0181, train_acc = 328.7607, val_acc = 0.6100
+d-step 1 epoch 10 :  average_loss = 0.0174, train_acc = 328.7935, val_acc = 0.6200
+
+--------
+EPOCH 4
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2024
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0208, train_acc = 328.5845, val_acc = 0.5800
+d-step 1 epoch 2 :  average_loss = 0.0180, train_acc = 328.7629, val_acc = 0.6000
+d-step 1 epoch 3 :  average_loss = 0.0167, train_acc = 328.8236, val_acc = 0.6300
+d-step 1 epoch 4 :  average_loss = 0.0158, train_acc = 328.8734, val_acc = 0.6400
+d-step 1 epoch 5 :  average_loss = 0.0151, train_acc = 328.9103, val_acc = 0.6500
+d-step 1 epoch 6 :  average_loss = 0.0146, train_acc = 328.9302, val_acc = 0.6600
+d-step 1 epoch 7 :  average_loss = 0.0139, train_acc = 328.9652, val_acc = 0.6750
+d-step 1 epoch 8 :  average_loss = 0.0134, train_acc = 328.9911, val_acc = 0.6800
+d-step 1 epoch 9 :  average_loss = 0.0129, train_acc = 329.0140, val_acc = 0.6800
+d-step 1 epoch 10 :  average_loss = 0.0124, train_acc = 329.0317, val_acc = 0.6750
+
+--------
+EPOCH 5
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2035
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0203, train_acc = 328.6112, val_acc = 0.6000
+d-step 1 epoch 2 :  average_loss = 0.0154, train_acc = 328.8680, val_acc = 0.6350
+d-step 1 epoch 3 :  average_loss = 0.0132, train_acc = 328.9778, val_acc = 0.6700
+d-step 1 epoch 4 :  average_loss = 0.0117, train_acc = 329.0497, val_acc = 0.7100
+d-step 1 epoch 5 :  average_loss = 0.0105, train_acc = 329.1067, val_acc = 0.7300
+d-step 1 epoch 6 :  average_loss = 0.0093, train_acc = 329.1610, val_acc = 0.7300
+d-step 1 epoch 7 :  average_loss = 0.0083, train_acc = 329.2034, val_acc = 0.7500
+d-step 1 epoch 8 :  average_loss = 0.0076, train_acc = 329.2385, val_acc = 0.7500
+d-step 1 epoch 9 :  average_loss = 0.0070, train_acc = 329.2670, val_acc = 0.7500
+d-step 1 epoch 10 :  average_loss = 0.0065, train_acc = 329.2901, val_acc = 0.7350
+
+--------
+EPOCH 6
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2168
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0184, train_acc = 328.7077, val_acc = 0.6700
+d-step 1 epoch 2 :  average_loss = 0.0117, train_acc = 329.0291, val_acc = 0.7100
+d-step 1 epoch 3 :  average_loss = 0.0095, train_acc = 329.1380, val_acc = 0.6950
+d-step 1 epoch 4 :  average_loss = 0.0083, train_acc = 329.1997, val_acc = 0.7250
+d-step 1 epoch 5 :  average_loss = 0.0075, train_acc = 329.2396, val_acc = 0.7650
+d-step 1 epoch 6 :  average_loss = 0.0070, train_acc = 329.2641, val_acc = 0.7600
+d-step 1 epoch 7 :  average_loss = 0.0066, train_acc = 329.2873, val_acc = 0.7550
+d-step 1 epoch 8 :  average_loss = 0.0062, train_acc = 329.3029, val_acc = 0.7650
+d-step 1 epoch 9 :  average_loss = 0.0059, train_acc = 329.3191, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0057, train_acc = 329.3295, val_acc = 0.7650
+
+--------
+EPOCH 7
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2001
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0188, train_acc = 328.6895, val_acc = 0.6500
+d-step 1 epoch 2 :  average_loss = 0.0113, train_acc = 329.0432, val_acc = 0.6950
+d-step 1 epoch 3 :  average_loss = 0.0089, train_acc = 329.1644, val_acc = 0.7300
+d-step 1 epoch 4 :  average_loss = 0.0077, train_acc = 329.2276, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0069, train_acc = 329.2667, val_acc = 0.7250
+d-step 1 epoch 6 :  average_loss = 0.0064, train_acc = 329.2942, val_acc = 0.7350
+d-step 1 epoch 7 :  average_loss = 0.0060, train_acc = 329.3132, val_acc = 0.7450
+d-step 1 epoch 8 :  average_loss = 0.0058, train_acc = 329.3262, val_acc = 0.7450
+d-step 1 epoch 9 :  average_loss = 0.0056, train_acc = 329.3358, val_acc = 0.7300
+d-step 1 epoch 10 :  average_loss = 0.0054, train_acc = 329.3447, val_acc = 0.7400
+
+--------
+EPOCH 8
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2387
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0179, train_acc = 328.7276, val_acc = 0.6250
+d-step 1 epoch 2 :  average_loss = 0.0103, train_acc = 329.0819, val_acc = 0.6550
+d-step 1 epoch 3 :  average_loss = 0.0079, train_acc = 329.2083, val_acc = 0.6500
+d-step 1 epoch 4 :  average_loss = 0.0069, train_acc = 329.2645, val_acc = 0.6800
+d-step 1 epoch 5 :  average_loss = 0.0063, train_acc = 329.2958, val_acc = 0.6900
+d-step 1 epoch 6 :  average_loss = 0.0060, train_acc = 329.3148, val_acc = 0.6850
+d-step 1 epoch 7 :  average_loss = 0.0057, train_acc = 329.3286, val_acc = 0.7000
+d-step 1 epoch 8 :  average_loss = 0.0055, train_acc = 329.3397, val_acc = 0.7050
+d-step 1 epoch 9 :  average_loss = 0.0053, train_acc = 329.3492, val_acc = 0.7150
+d-step 1 epoch 10 :  average_loss = 0.0052, train_acc = 329.3531, val_acc = 0.7000
+
+--------
+EPOCH 9
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2296
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0163, train_acc = 328.7957, val_acc = 0.6600
+d-step 1 epoch 2 :  average_loss = 0.0092, train_acc = 329.1334, val_acc = 0.6950
+d-step 1 epoch 3 :  average_loss = 0.0073, train_acc = 329.2403, val_acc = 0.7350
+d-step 1 epoch 4 :  average_loss = 0.0064, train_acc = 329.2858, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0059, train_acc = 329.3141, val_acc = 0.7350
+d-step 1 epoch 6 :  average_loss = 0.0056, train_acc = 329.3283, val_acc = 0.7300
+d-step 1 epoch 7 :  average_loss = 0.0054, train_acc = 329.3419, val_acc = 0.7250
+d-step 1 epoch 8 :  average_loss = 0.0052, train_acc = 329.3497, val_acc = 0.7250
+d-step 1 epoch 9 :  average_loss = 0.0051, train_acc = 329.3558, val_acc = 0.7350
+d-step 1 epoch 10 :  average_loss = 0.0050, train_acc = 329.3605, val_acc = 0.7400
+
+--------
+EPOCH 10
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2319
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0156, train_acc = 328.8150, val_acc = 0.6950
+d-step 1 epoch 2 :  average_loss = 0.0086, train_acc = 329.1635, val_acc = 0.7200
+d-step 1 epoch 3 :  average_loss = 0.0069, train_acc = 329.2536, val_acc = 0.7250
+d-step 1 epoch 4 :  average_loss = 0.0061, train_acc = 329.2981, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0057, train_acc = 329.3243, val_acc = 0.7450
+d-step 1 epoch 6 :  average_loss = 0.0054, train_acc = 329.3386, val_acc = 0.7450
+d-step 1 epoch 7 :  average_loss = 0.0052, train_acc = 329.3474, val_acc = 0.7500
+d-step 1 epoch 8 :  average_loss = 0.0051, train_acc = 329.3566, val_acc = 0.7450
+d-step 1 epoch 9 :  average_loss = 0.0050, train_acc = 329.3600, val_acc = 0.7400
+d-step 1 epoch 10 :  average_loss = 0.0049, train_acc = 329.3653, val_acc = 0.7400
+
+--------
+EPOCH 11
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2303
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0144, train_acc = 328.8684, val_acc = 0.6550
+d-step 1 epoch 2 :  average_loss = 0.0079, train_acc = 329.1954, val_acc = 0.7150
+d-step 1 epoch 3 :  average_loss = 0.0064, train_acc = 329.2769, val_acc = 0.7200
+d-step 1 epoch 4 :  average_loss = 0.0057, train_acc = 329.3185, val_acc = 0.7350
+d-step 1 epoch 5 :  average_loss = 0.0054, train_acc = 329.3392, val_acc = 0.7450
+d-step 1 epoch 6 :  average_loss = 0.0051, train_acc = 329.3512, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0050, train_acc = 329.3597, val_acc = 0.7450
+d-step 1 epoch 8 :  average_loss = 0.0049, train_acc = 329.3648, val_acc = 0.7400
+d-step 1 epoch 9 :  average_loss = 0.0048, train_acc = 329.3679, val_acc = 0.7500
+d-step 1 epoch 10 :  average_loss = 0.0047, train_acc = 329.3718, val_acc = 0.7500
+
+--------
+EPOCH 12
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2477
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0132, train_acc = 328.9280, val_acc = 0.6650
+d-step 1 epoch 2 :  average_loss = 0.0070, train_acc = 329.2418, val_acc = 0.6800
+d-step 1 epoch 3 :  average_loss = 0.0058, train_acc = 329.3095, val_acc = 0.6800
+d-step 1 epoch 4 :  average_loss = 0.0054, train_acc = 329.3357, val_acc = 0.6750
+d-step 1 epoch 5 :  average_loss = 0.0051, train_acc = 329.3521, val_acc = 0.6850
+d-step 1 epoch 6 :  average_loss = 0.0050, train_acc = 329.3606, val_acc = 0.6750
+d-step 1 epoch 7 :  average_loss = 0.0048, train_acc = 329.3668, val_acc = 0.6850
+d-step 1 epoch 8 :  average_loss = 0.0048, train_acc = 329.3702, val_acc = 0.6800
+d-step 1 epoch 9 :  average_loss = 0.0047, train_acc = 329.3745, val_acc = 0.6900
+d-step 1 epoch 10 :  average_loss = 0.0047, train_acc = 329.3756, val_acc = 0.6700
+
+--------
+EPOCH 13
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2385
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0123, train_acc = 328.9640, val_acc = 0.6450
+d-step 1 epoch 2 :  average_loss = 0.0066, train_acc = 329.2629, val_acc = 0.6750
+d-step 1 epoch 3 :  average_loss = 0.0056, train_acc = 329.3179, val_acc = 0.7000
+d-step 1 epoch 4 :  average_loss = 0.0052, train_acc = 329.3432, val_acc = 0.7000
+d-step 1 epoch 5 :  average_loss = 0.0050, train_acc = 329.3564, val_acc = 0.6850
+d-step 1 epoch 6 :  average_loss = 0.0049, train_acc = 329.3628, val_acc = 0.6850
+d-step 1 epoch 7 :  average_loss = 0.0048, train_acc = 329.3674, val_acc = 0.7000
+d-step 1 epoch 8 :  average_loss = 0.0047, train_acc = 329.3718, val_acc = 0.7000
+d-step 1 epoch 9 :  average_loss = 0.0046, train_acc = 329.3759, val_acc = 0.7000
+d-step 1 epoch 10 :  average_loss = 0.0046, train_acc = 329.3781, val_acc = 0.7050
+
+--------
+EPOCH 14
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2487
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0121, train_acc = 328.9679, val_acc = 0.6550
+d-step 1 epoch 2 :  average_loss = 0.0064, train_acc = 329.2684, val_acc = 0.6850
+d-step 1 epoch 3 :  average_loss = 0.0054, train_acc = 329.3284, val_acc = 0.6850
+d-step 1 epoch 4 :  average_loss = 0.0050, train_acc = 329.3506, val_acc = 0.7000
+d-step 1 epoch 5 :  average_loss = 0.0048, train_acc = 329.3621, val_acc = 0.7000
+d-step 1 epoch 6 :  average_loss = 0.0047, train_acc = 329.3695, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0046, train_acc = 329.3756, val_acc = 0.7250
+d-step 1 epoch 8 :  average_loss = 0.0045, train_acc = 329.3787, val_acc = 0.7300
+d-step 1 epoch 9 :  average_loss = 0.0045, train_acc = 329.3820, val_acc = 0.7300
+d-step 1 epoch 10 :  average_loss = 0.0044, train_acc = 329.3841, val_acc = 0.7300
+
+--------
+EPOCH 15
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2481
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0132, train_acc = 328.8995, val_acc = 0.6900
+d-step 1 epoch 2 :  average_loss = 0.0070, train_acc = 329.2337, val_acc = 0.7150
+d-step 1 epoch 3 :  average_loss = 0.0056, train_acc = 329.3064, val_acc = 0.7200
+d-step 1 epoch 4 :  average_loss = 0.0049, train_acc = 329.3589, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0047, train_acc = 329.3698, val_acc = 0.7200
+d-step 1 epoch 6 :  average_loss = 0.0046, train_acc = 329.3752, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0045, train_acc = 329.3798, val_acc = 0.7200
+d-step 1 epoch 8 :  average_loss = 0.0044, train_acc = 329.3823, val_acc = 0.7200
+d-step 1 epoch 9 :  average_loss = 0.0044, train_acc = 329.3843, val_acc = 0.7200
+d-step 1 epoch 10 :  average_loss = 0.0044, train_acc = 329.3866, val_acc = 0.7250
+
+--------
+EPOCH 16
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2380
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0099, train_acc = 329.0580, val_acc = 0.6750
+d-step 1 epoch 2 :  average_loss = 0.0052, train_acc = 329.3306, val_acc = 0.6950
+d-step 1 epoch 3 :  average_loss = 0.0047, train_acc = 329.3638, val_acc = 0.7000
+d-step 1 epoch 4 :  average_loss = 0.0046, train_acc = 329.3734, val_acc = 0.7000
+d-step 1 epoch 5 :  average_loss = 0.0045, train_acc = 329.3804, val_acc = 0.7000
+d-step 1 epoch 6 :  average_loss = 0.0044, train_acc = 329.3845, val_acc = 0.7000
+d-step 1 epoch 7 :  average_loss = 0.0043, train_acc = 329.3875, val_acc = 0.7000
+d-step 1 epoch 8 :  average_loss = 0.0043, train_acc = 329.3891, val_acc = 0.6950
+d-step 1 epoch 9 :  average_loss = 0.0043, train_acc = 329.3902, val_acc = 0.7050
+d-step 1 epoch 10 :  average_loss = 0.0042, train_acc = 329.3918, val_acc = 0.7050
+
+--------
+EPOCH 17
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2335
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0105, train_acc = 329.0206, val_acc = 0.6750
+d-step 1 epoch 2 :  average_loss = 0.0054, train_acc = 329.3205, val_acc = 0.6900
+d-step 1 epoch 3 :  average_loss = 0.0047, train_acc = 329.3594, val_acc = 0.6850
+d-step 1 epoch 4 :  average_loss = 0.0045, train_acc = 329.3745, val_acc = 0.6900
+d-step 1 epoch 5 :  average_loss = 0.0044, train_acc = 329.3816, val_acc = 0.6950
+d-step 1 epoch 6 :  average_loss = 0.0043, train_acc = 329.3850, val_acc = 0.6800
+d-step 1 epoch 7 :  average_loss = 0.0043, train_acc = 329.3877, val_acc = 0.6950
+d-step 1 epoch 8 :  average_loss = 0.0042, train_acc = 329.3889, val_acc = 0.6950
+d-step 1 epoch 9 :  average_loss = 0.0042, train_acc = 329.3915, val_acc = 0.7000
+d-step 1 epoch 10 :  average_loss = 0.0042, train_acc = 329.3927, val_acc = 0.7000
+
+--------
+EPOCH 18
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2349
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0103, train_acc = 328.9774, val_acc = 0.7050
+d-step 1 epoch 2 :  average_loss = 0.0053, train_acc = 329.3037, val_acc = 0.6950
+d-step 1 epoch 3 :  average_loss = 0.0045, train_acc = 329.3676, val_acc = 0.7000
+d-step 1 epoch 4 :  average_loss = 0.0044, train_acc = 329.3816, val_acc = 0.6950
+d-step 1 epoch 5 :  average_loss = 0.0043, train_acc = 329.3873, val_acc = 0.7100
+d-step 1 epoch 6 :  average_loss = 0.0042, train_acc = 329.3904, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0042, train_acc = 329.3932, val_acc = 0.7150
+d-step 1 epoch 8 :  average_loss = 0.0041, train_acc = 329.3947, val_acc = 0.7150
+d-step 1 epoch 9 :  average_loss = 0.0041, train_acc = 329.3957, val_acc = 0.7250
+d-step 1 epoch 10 :  average_loss = 0.0041, train_acc = 329.3972, val_acc = 0.7150
+
+--------
+EPOCH 19
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2417
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0110, train_acc = 328.8752, val_acc = 0.7200
+d-step 1 epoch 2 :  average_loss = 0.0060, train_acc = 329.1705, val_acc = 0.7400
+d-step 1 epoch 3 :  average_loss = 0.0052, train_acc = 329.2359, val_acc = 0.7450
+d-step 1 epoch 4 :  average_loss = 0.0050, train_acc = 329.2552, val_acc = 0.7550
+d-step 1 epoch 5 :  average_loss = 0.0047, train_acc = 329.3050, val_acc = 0.7600
+d-step 1 epoch 6 :  average_loss = 0.0044, train_acc = 329.3499, val_acc = 0.7600
+d-step 1 epoch 7 :  average_loss = 0.0042, train_acc = 329.3861, val_acc = 0.7600
+d-step 1 epoch 8 :  average_loss = 0.0041, train_acc = 329.3950, val_acc = 0.7500
+d-step 1 epoch 9 :  average_loss = 0.0040, train_acc = 329.3970, val_acc = 0.7650
+d-step 1 epoch 10 :  average_loss = 0.0040, train_acc = 329.3985, val_acc = 0.7500
+
+--------
+EPOCH 20
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.2039
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0093, train_acc = 329.0453, val_acc = 0.7250
+d-step 1 epoch 2 :  average_loss = 0.0050, train_acc = 329.3161, val_acc = 0.7650
+d-step 1 epoch 3 :  average_loss = 0.0044, train_acc = 329.3734, val_acc = 0.7500
+d-step 1 epoch 4 :  average_loss = 0.0042, train_acc = 329.3864, val_acc = 0.7700
+d-step 1 epoch 5 :  average_loss = 0.0041, train_acc = 329.3920, val_acc = 0.7500
+d-step 1 epoch 6 :  average_loss = 0.0041, train_acc = 329.3954, val_acc = 0.7750
+d-step 1 epoch 7 :  average_loss = 0.0040, train_acc = 329.3976, val_acc = 0.7850
+d-step 1 epoch 8 :  average_loss = 0.0040, train_acc = 329.3997, val_acc = 0.7700
+d-step 1 epoch 9 :  average_loss = 0.0039, train_acc = 329.4013, val_acc = 0.7750
+d-step 1 epoch 10 :  average_loss = 0.0039, train_acc = 329.4029, val_acc = 0.7700
+
+--------
+EPOCH 21
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1900
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0089, train_acc = 329.1017, val_acc = 0.7050
+d-step 1 epoch 2 :  average_loss = 0.0047, train_acc = 329.3494, val_acc = 0.7200
+d-step 1 epoch 3 :  average_loss = 0.0043, train_acc = 329.3780, val_acc = 0.7100
+d-step 1 epoch 4 :  average_loss = 0.0042, train_acc = 329.3872, val_acc = 0.7150
+d-step 1 epoch 5 :  average_loss = 0.0041, train_acc = 329.3924, val_acc = 0.7250
+d-step 1 epoch 6 :  average_loss = 0.0040, train_acc = 329.3954, val_acc = 0.7150
+d-step 1 epoch 7 :  average_loss = 0.0040, train_acc = 329.3983, val_acc = 0.7200
+d-step 1 epoch 8 :  average_loss = 0.0039, train_acc = 329.3994, val_acc = 0.7200
+d-step 1 epoch 9 :  average_loss = 0.0039, train_acc = 329.4010, val_acc = 0.7250
+d-step 1 epoch 10 :  average_loss = 0.0039, train_acc = 329.4019, val_acc = 0.7200
+
+--------
+EPOCH 22
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1574
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0084, train_acc = 329.0854, val_acc = 0.7450
+d-step 1 epoch 2 :  average_loss = 0.0046, train_acc = 329.3466, val_acc = 0.7500
+d-step 1 epoch 3 :  average_loss = 0.0042, train_acc = 329.3836, val_acc = 0.7600
+d-step 1 epoch 4 :  average_loss = 0.0041, train_acc = 329.3909, val_acc = 0.7550
+d-step 1 epoch 5 :  average_loss = 0.0040, train_acc = 329.3954, val_acc = 0.7500
+d-step 1 epoch 6 :  average_loss = 0.0039, train_acc = 329.3977, val_acc = 0.7700
+d-step 1 epoch 7 :  average_loss = 0.0039, train_acc = 329.4002, val_acc = 0.7550
+d-step 1 epoch 8 :  average_loss = 0.0039, train_acc = 329.4005, val_acc = 0.7600
+d-step 1 epoch 9 :  average_loss = 0.0038, train_acc = 329.4024, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0038, train_acc = 329.4031, val_acc = 0.7650
+
+--------
+EPOCH 23
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1415
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0079, train_acc = 329.1469, val_acc = 0.7000
+d-step 1 epoch 2 :  average_loss = 0.0044, train_acc = 329.3671, val_acc = 0.7250
+d-step 1 epoch 3 :  average_loss = 0.0041, train_acc = 329.3867, val_acc = 0.7450
+d-step 1 epoch 4 :  average_loss = 0.0040, train_acc = 329.3937, val_acc = 0.7500
+d-step 1 epoch 5 :  average_loss = 0.0039, train_acc = 329.3966, val_acc = 0.7550
+d-step 1 epoch 6 :  average_loss = 0.0039, train_acc = 329.3988, val_acc = 0.7550
+d-step 1 epoch 7 :  average_loss = 0.0038, train_acc = 329.4006, val_acc = 0.7600
+d-step 1 epoch 8 :  average_loss = 0.0038, train_acc = 329.4019, val_acc = 0.7500
+d-step 1 epoch 9 :  average_loss = 0.0038, train_acc = 329.4026, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0038, train_acc = 329.4032, val_acc = 0.7550
+
+--------
+EPOCH 24
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1445
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0077, train_acc = 329.1547, val_acc = 0.7050
+d-step 1 epoch 2 :  average_loss = 0.0044, train_acc = 329.3663, val_acc = 0.7100
+d-step 1 epoch 3 :  average_loss = 0.0041, train_acc = 329.3850, val_acc = 0.7150
+d-step 1 epoch 4 :  average_loss = 0.0040, train_acc = 329.3920, val_acc = 0.7250
+d-step 1 epoch 5 :  average_loss = 0.0039, train_acc = 329.3970, val_acc = 0.7250
+d-step 1 epoch 6 :  average_loss = 0.0038, train_acc = 329.3990, val_acc = 0.7350
+d-step 1 epoch 7 :  average_loss = 0.0038, train_acc = 329.4003, val_acc = 0.7200
+d-step 1 epoch 8 :  average_loss = 0.0038, train_acc = 329.4028, val_acc = 0.7300
+d-step 1 epoch 9 :  average_loss = 0.0038, train_acc = 329.4027, val_acc = 0.7150
+d-step 1 epoch 10 :  average_loss = 0.0037, train_acc = 329.4038, val_acc = 0.7250
+
+--------
+EPOCH 25
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1335
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0074, train_acc = 329.1596, val_acc = 0.6750
+d-step 1 epoch 2 :  average_loss = 0.0041, train_acc = 329.3777, val_acc = 0.6850
+d-step 1 epoch 3 :  average_loss = 0.0039, train_acc = 329.3940, val_acc = 0.6900
+d-step 1 epoch 4 :  average_loss = 0.0038, train_acc = 329.3989, val_acc = 0.7000
+d-step 1 epoch 5 :  average_loss = 0.0038, train_acc = 329.4022, val_acc = 0.6950
+d-step 1 epoch 6 :  average_loss = 0.0037, train_acc = 329.4033, val_acc = 0.6900
+d-step 1 epoch 7 :  average_loss = 0.0037, train_acc = 329.4049, val_acc = 0.7000
+d-step 1 epoch 8 :  average_loss = 0.0037, train_acc = 329.4060, val_acc = 0.6950
+d-step 1 epoch 9 :  average_loss = 0.0036, train_acc = 329.4072, val_acc = 0.7000
+d-step 1 epoch 10 :  average_loss = 0.0036, train_acc = 329.4074, val_acc = 0.7000
+
+--------
+EPOCH 26
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1075
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0074, train_acc = 329.1694, val_acc = 0.7050
+d-step 1 epoch 2 :  average_loss = 0.0041, train_acc = 329.3768, val_acc = 0.7200
+d-step 1 epoch 3 :  average_loss = 0.0038, train_acc = 329.3938, val_acc = 0.7250
+d-step 1 epoch 4 :  average_loss = 0.0037, train_acc = 329.3993, val_acc = 0.7400
+d-step 1 epoch 5 :  average_loss = 0.0037, train_acc = 329.4026, val_acc = 0.7350
+d-step 1 epoch 6 :  average_loss = 0.0037, train_acc = 329.4044, val_acc = 0.7300
+d-step 1 epoch 7 :  average_loss = 0.0036, train_acc = 329.4051, val_acc = 0.7300
+d-step 1 epoch 8 :  average_loss = 0.0036, train_acc = 329.4065, val_acc = 0.7300
+d-step 1 epoch 9 :  average_loss = 0.0036, train_acc = 329.4071, val_acc = 0.7350
+d-step 1 epoch 10 :  average_loss = 0.0036, train_acc = 329.4076, val_acc = 0.7250
+
+--------
+EPOCH 27
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1036
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0065, train_acc = 329.2149, val_acc = 0.7450
+d-step 1 epoch 2 :  average_loss = 0.0039, train_acc = 329.3850, val_acc = 0.7500
+d-step 1 epoch 3 :  average_loss = 0.0037, train_acc = 329.3977, val_acc = 0.7450
+d-step 1 epoch 4 :  average_loss = 0.0037, train_acc = 329.4019, val_acc = 0.7400
+d-step 1 epoch 5 :  average_loss = 0.0036, train_acc = 329.4038, val_acc = 0.7400
+d-step 1 epoch 6 :  average_loss = 0.0036, train_acc = 329.4058, val_acc = 0.7500
+d-step 1 epoch 7 :  average_loss = 0.0036, train_acc = 329.4062, val_acc = 0.7500
+d-step 1 epoch 8 :  average_loss = 0.0036, train_acc = 329.4069, val_acc = 0.7450
+d-step 1 epoch 9 :  average_loss = 0.0035, train_acc = 329.4078, val_acc = 0.7500
+d-step 1 epoch 10 :  average_loss = 0.0035, train_acc = 329.4083, val_acc = 0.7450
+
+--------
+EPOCH 28
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1086
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0073, train_acc = 329.1412, val_acc = 0.7850
+d-step 1 epoch 2 :  average_loss = 0.0041, train_acc = 329.3560, val_acc = 0.7700
+d-step 1 epoch 3 :  average_loss = 0.0037, train_acc = 329.3976, val_acc = 0.7850
+d-step 1 epoch 4 :  average_loss = 0.0036, train_acc = 329.4028, val_acc = 0.7850
+d-step 1 epoch 5 :  average_loss = 0.0035, train_acc = 329.4047, val_acc = 0.7850
+d-step 1 epoch 6 :  average_loss = 0.0035, train_acc = 329.4063, val_acc = 0.7850
+d-step 1 epoch 7 :  average_loss = 0.0035, train_acc = 329.4071, val_acc = 0.7900
+d-step 1 epoch 8 :  average_loss = 0.0035, train_acc = 329.4076, val_acc = 0.7850
+d-step 1 epoch 9 :  average_loss = 0.0034, train_acc = 329.4083, val_acc = 0.7850
+d-step 1 epoch 10 :  average_loss = 0.0034, train_acc = 329.4087, val_acc = 0.7950
+
+--------
+EPOCH 29
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1082
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0057, train_acc = 329.2509, val_acc = 0.7200
+d-step 1 epoch 2 :  average_loss = 0.0037, train_acc = 329.3884, val_acc = 0.7250
+d-step 1 epoch 3 :  average_loss = 0.0036, train_acc = 329.3990, val_acc = 0.7350
+d-step 1 epoch 4 :  average_loss = 0.0035, train_acc = 329.4024, val_acc = 0.7250
+d-step 1 epoch 5 :  average_loss = 0.0035, train_acc = 329.4043, val_acc = 0.7300
+d-step 1 epoch 6 :  average_loss = 0.0034, train_acc = 329.4055, val_acc = 0.7250
+d-step 1 epoch 7 :  average_loss = 0.0034, train_acc = 329.4063, val_acc = 0.7300
+d-step 1 epoch 8 :  average_loss = 0.0034, train_acc = 329.4070, val_acc = 0.7300
+d-step 1 epoch 9 :  average_loss = 0.0033, train_acc = 329.4078, val_acc = 0.7450
+d-step 1 epoch 10 :  average_loss = 0.0033, train_acc = 329.4081, val_acc = 0.7250
+
+--------
+EPOCH 30
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1049
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0060, train_acc = 329.1956, val_acc = 0.7650
+d-step 1 epoch 2 :  average_loss = 0.0037, train_acc = 329.3897, val_acc = 0.7850
+d-step 1 epoch 3 :  average_loss = 0.0035, train_acc = 329.4001, val_acc = 0.7800
+d-step 1 epoch 4 :  average_loss = 0.0034, train_acc = 329.4055, val_acc = 0.7750
+d-step 1 epoch 5 :  average_loss = 0.0033, train_acc = 329.4065, val_acc = 0.7750
+d-step 1 epoch 6 :  average_loss = 0.0033, train_acc = 329.4075, val_acc = 0.7750
+d-step 1 epoch 7 :  average_loss = 0.0033, train_acc = 329.4081, val_acc = 0.7800
+d-step 1 epoch 8 :  average_loss = 0.0033, train_acc = 329.4093, val_acc = 0.7750
+d-step 1 epoch 9 :  average_loss = 0.0032, train_acc = 329.4095, val_acc = 0.7800
+d-step 1 epoch 10 :  average_loss = 0.0032, train_acc = 329.4104, val_acc = 0.7800
+
+--------
+EPOCH 31
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0962
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0061, train_acc = 329.2356, val_acc = 0.7200
+d-step 1 epoch 2 :  average_loss = 0.0036, train_acc = 329.3902, val_acc = 0.7250
+d-step 1 epoch 3 :  average_loss = 0.0034, train_acc = 329.4013, val_acc = 0.7250
+d-step 1 epoch 4 :  average_loss = 0.0033, train_acc = 329.4053, val_acc = 0.7350
+d-step 1 epoch 5 :  average_loss = 0.0032, train_acc = 329.4076, val_acc = 0.7400
+d-step 1 epoch 6 :  average_loss = 0.0032, train_acc = 329.4097, val_acc = 0.7350
+d-step 1 epoch 7 :  average_loss = 0.0031, train_acc = 329.4099, val_acc = 0.7350
+d-step 1 epoch 8 :  average_loss = 0.0031, train_acc = 329.4107, val_acc = 0.7300
+d-step 1 epoch 9 :  average_loss = 0.0031, train_acc = 329.4112, val_acc = 0.7400
+d-step 1 epoch 10 :  average_loss = 0.0031, train_acc = 329.4121, val_acc = 0.7400
+
+--------
+EPOCH 32
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1033
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0065, train_acc = 329.1207, val_acc = 0.7150
+d-step 1 epoch 2 :  average_loss = 0.0036, train_acc = 329.3693, val_acc = 0.7100
+d-step 1 epoch 3 :  average_loss = 0.0033, train_acc = 329.4001, val_acc = 0.7050
+d-step 1 epoch 4 :  average_loss = 0.0032, train_acc = 329.4058, val_acc = 0.7150
+d-step 1 epoch 5 :  average_loss = 0.0031, train_acc = 329.4076, val_acc = 0.7100
+d-step 1 epoch 6 :  average_loss = 0.0031, train_acc = 329.4081, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0030, train_acc = 329.4099, val_acc = 0.7150
+d-step 1 epoch 8 :  average_loss = 0.0030, train_acc = 329.4105, val_acc = 0.7150
+d-step 1 epoch 9 :  average_loss = 0.0029, train_acc = 329.4114, val_acc = 0.7150
+d-step 1 epoch 10 :  average_loss = 0.0029, train_acc = 329.4119, val_acc = 0.7200
+
+--------
+EPOCH 33
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1064
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0058, train_acc = 329.2148, val_acc = 0.7300
+d-step 1 epoch 2 :  average_loss = 0.0033, train_acc = 329.3925, val_acc = 0.7500
+d-step 1 epoch 3 :  average_loss = 0.0031, train_acc = 329.4026, val_acc = 0.7600
+d-step 1 epoch 4 :  average_loss = 0.0030, train_acc = 329.4076, val_acc = 0.7750
+d-step 1 epoch 5 :  average_loss = 0.0029, train_acc = 329.4100, val_acc = 0.7600
+d-step 1 epoch 6 :  average_loss = 0.0029, train_acc = 329.4105, val_acc = 0.7600
+d-step 1 epoch 7 :  average_loss = 0.0028, train_acc = 329.4114, val_acc = 0.7550
+d-step 1 epoch 8 :  average_loss = 0.0028, train_acc = 329.4119, val_acc = 0.7650
+d-step 1 epoch 9 :  average_loss = 0.0027, train_acc = 329.4128, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0027, train_acc = 329.4133, val_acc = 0.7550
+
+--------
+EPOCH 34
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0964
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0053, train_acc = 329.2334, val_acc = 0.7250
+d-step 1 epoch 2 :  average_loss = 0.0032, train_acc = 329.3741, val_acc = 0.7200
+d-step 1 epoch 3 :  average_loss = 0.0030, train_acc = 329.4058, val_acc = 0.7050
+d-step 1 epoch 4 :  average_loss = 0.0028, train_acc = 329.4097, val_acc = 0.7250
+d-step 1 epoch 5 :  average_loss = 0.0028, train_acc = 329.4121, val_acc = 0.7300
+d-step 1 epoch 6 :  average_loss = 0.0027, train_acc = 329.4131, val_acc = 0.7300
+d-step 1 epoch 7 :  average_loss = 0.0026, train_acc = 329.4143, val_acc = 0.7350
+d-step 1 epoch 8 :  average_loss = 0.0026, train_acc = 329.4151, val_acc = 0.7400
+d-step 1 epoch 9 :  average_loss = 0.0025, train_acc = 329.4151, val_acc = 0.7350
+d-step 1 epoch 10 :  average_loss = 0.0025, train_acc = 329.4153, val_acc = 0.7350
+
+--------
+EPOCH 35
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1022
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0053, train_acc = 329.2553, val_acc = 0.6900
+d-step 1 epoch 2 :  average_loss = 0.0030, train_acc = 329.3977, val_acc = 0.6950
+d-step 1 epoch 3 :  average_loss = 0.0028, train_acc = 329.4071, val_acc = 0.7150
+d-step 1 epoch 4 :  average_loss = 0.0027, train_acc = 329.4113, val_acc = 0.7000
+d-step 1 epoch 5 :  average_loss = 0.0026, train_acc = 329.4123, val_acc = 0.7050
+d-step 1 epoch 6 :  average_loss = 0.0025, train_acc = 329.4135, val_acc = 0.7200
+d-step 1 epoch 7 :  average_loss = 0.0024, train_acc = 329.4146, val_acc = 0.7100
+d-step 1 epoch 8 :  average_loss = 0.0024, train_acc = 329.4155, val_acc = 0.7150
+d-step 1 epoch 9 :  average_loss = 0.0023, train_acc = 329.4160, val_acc = 0.7200
+d-step 1 epoch 10 :  average_loss = 0.0023, train_acc = 329.4164, val_acc = 0.7200
+
+--------
+EPOCH 36
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0857
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0049, train_acc = 329.2575, val_acc = 0.7450
+d-step 1 epoch 2 :  average_loss = 0.0028, train_acc = 329.3973, val_acc = 0.7450
+d-step 1 epoch 3 :  average_loss = 0.0026, train_acc = 329.4085, val_acc = 0.7500
+d-step 1 epoch 4 :  average_loss = 0.0024, train_acc = 329.4126, val_acc = 0.7450
+d-step 1 epoch 5 :  average_loss = 0.0023, train_acc = 329.4148, val_acc = 0.7500
+d-step 1 epoch 6 :  average_loss = 0.0023, train_acc = 329.4158, val_acc = 0.7500
+d-step 1 epoch 7 :  average_loss = 0.0022, train_acc = 329.4173, val_acc = 0.7550
+d-step 1 epoch 8 :  average_loss = 0.0021, train_acc = 329.4182, val_acc = 0.7650
+d-step 1 epoch 9 :  average_loss = 0.0021, train_acc = 329.4190, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0020, train_acc = 329.4191, val_acc = 0.7650
+
+--------
+EPOCH 37
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0977
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0048, train_acc = 329.2708, val_acc = 0.7600
+d-step 1 epoch 2 :  average_loss = 0.0026, train_acc = 329.4033, val_acc = 0.7750
+d-step 1 epoch 3 :  average_loss = 0.0023, train_acc = 329.4122, val_acc = 0.7700
+d-step 1 epoch 4 :  average_loss = 0.0022, train_acc = 329.4146, val_acc = 0.7700
+d-step 1 epoch 5 :  average_loss = 0.0021, train_acc = 329.4176, val_acc = 0.7850
+d-step 1 epoch 6 :  average_loss = 0.0020, train_acc = 329.4186, val_acc = 0.7850
+d-step 1 epoch 7 :  average_loss = 0.0020, train_acc = 329.4200, val_acc = 0.7800
+d-step 1 epoch 8 :  average_loss = 0.0019, train_acc = 329.4212, val_acc = 0.7900
+d-step 1 epoch 9 :  average_loss = 0.0019, train_acc = 329.4228, val_acc = 0.7850
+d-step 1 epoch 10 :  average_loss = 0.0018, train_acc = 329.4250, val_acc = 0.7950
+
+--------
+EPOCH 38
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0953
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0052, train_acc = 329.2338, val_acc = 0.7600
+d-step 1 epoch 2 :  average_loss = 0.0025, train_acc = 329.3900, val_acc = 0.7450
+d-step 1 epoch 3 :  average_loss = 0.0022, train_acc = 329.4150, val_acc = 0.7500
+d-step 1 epoch 4 :  average_loss = 0.0020, train_acc = 329.4200, val_acc = 0.7450
+d-step 1 epoch 5 :  average_loss = 0.0019, train_acc = 329.4238, val_acc = 0.7600
+d-step 1 epoch 6 :  average_loss = 0.0019, train_acc = 329.4265, val_acc = 0.7600
+d-step 1 epoch 7 :  average_loss = 0.0018, train_acc = 329.4311, val_acc = 0.7650
+d-step 1 epoch 8 :  average_loss = 0.0017, train_acc = 329.4327, val_acc = 0.7700
+d-step 1 epoch 9 :  average_loss = 0.0017, train_acc = 329.4370, val_acc = 0.7750
+d-step 1 epoch 10 :  average_loss = 0.0016, train_acc = 329.4407, val_acc = 0.7750
+
+--------
+EPOCH 39
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0802
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0067, train_acc = 329.1984, val_acc = 0.7150
+d-step 1 epoch 2 :  average_loss = 0.0040, train_acc = 329.3453, val_acc = 0.7200
+d-step 1 epoch 3 :  average_loss = 0.0033, train_acc = 329.3698, val_acc = 0.7300
+d-step 1 epoch 4 :  average_loss = 0.0028, train_acc = 329.4015, val_acc = 0.7450
+d-step 1 epoch 5 :  average_loss = 0.0027, train_acc = 329.4070, val_acc = 0.7450
+d-step 1 epoch 6 :  average_loss = 0.0026, train_acc = 329.4140, val_acc = 0.7400
+d-step 1 epoch 7 :  average_loss = 0.0025, train_acc = 329.4185, val_acc = 0.7400
+d-step 1 epoch 8 :  average_loss = 0.0025, train_acc = 329.4207, val_acc = 0.7500
+d-step 1 epoch 9 :  average_loss = 0.0019, train_acc = 329.4380, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0015, train_acc = 329.4608, val_acc = 0.7500
+
+--------
+EPOCH 40
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0832
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0044, train_acc = 329.2774, val_acc = 0.7800
+d-step 1 epoch 2 :  average_loss = 0.0021, train_acc = 329.4268, val_acc = 0.8100
+d-step 1 epoch 3 :  average_loss = 0.0019, train_acc = 329.4423, val_acc = 0.7950
+d-step 1 epoch 4 :  average_loss = 0.0017, train_acc = 329.4509, val_acc = 0.7950
+d-step 1 epoch 5 :  average_loss = 0.0016, train_acc = 329.4554, val_acc = 0.8000
+d-step 1 epoch 6 :  average_loss = 0.0015, train_acc = 329.4610, val_acc = 0.8150
+d-step 1 epoch 7 :  average_loss = 0.0015, train_acc = 329.4655, val_acc = 0.7950
+d-step 1 epoch 8 :  average_loss = 0.0014, train_acc = 329.4677, val_acc = 0.8100
+d-step 1 epoch 9 :  average_loss = 0.0014, train_acc = 329.4706, val_acc = 0.8000
+d-step 1 epoch 10 :  average_loss = 0.0014, train_acc = 329.4735, val_acc = 0.7950
+
+--------
+EPOCH 41
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0961
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0042, train_acc = 329.2937, val_acc = 0.7750
+d-step 1 epoch 2 :  average_loss = 0.0019, train_acc = 329.4426, val_acc = 0.7950
+d-step 1 epoch 3 :  average_loss = 0.0017, train_acc = 329.4565, val_acc = 0.7850
+d-step 1 epoch 4 :  average_loss = 0.0016, train_acc = 329.4641, val_acc = 0.7850
+d-step 1 epoch 5 :  average_loss = 0.0015, train_acc = 329.4685, val_acc = 0.7950
+d-step 1 epoch 6 :  average_loss = 0.0014, train_acc = 329.4724, val_acc = 0.7800
+d-step 1 epoch 7 :  average_loss = 0.0014, train_acc = 329.4762, val_acc = 0.7900
+d-step 1 epoch 8 :  average_loss = 0.0013, train_acc = 329.4795, val_acc = 0.7900
+d-step 1 epoch 9 :  average_loss = 0.0013, train_acc = 329.4808, val_acc = 0.7950
+d-step 1 epoch 10 :  average_loss = 0.0013, train_acc = 329.4833, val_acc = 0.8000
+
+--------
+EPOCH 42
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0855
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0048, train_acc = 329.2482, val_acc = 0.7800
+d-step 1 epoch 2 :  average_loss = 0.0019, train_acc = 329.4443, val_acc = 0.8200
+d-step 1 epoch 3 :  average_loss = 0.0016, train_acc = 329.4620, val_acc = 0.8100
+d-step 1 epoch 4 :  average_loss = 0.0015, train_acc = 329.4710, val_acc = 0.8050
+d-step 1 epoch 5 :  average_loss = 0.0014, train_acc = 329.4781, val_acc = 0.8050
+d-step 1 epoch 6 :  average_loss = 0.0014, train_acc = 329.4798, val_acc = 0.8200
+d-step 1 epoch 7 :  average_loss = 0.0013, train_acc = 329.4839, val_acc = 0.8250
+d-step 1 epoch 8 :  average_loss = 0.0013, train_acc = 329.4853, val_acc = 0.8250
+d-step 1 epoch 9 :  average_loss = 0.0012, train_acc = 329.4887, val_acc = 0.8150
+d-step 1 epoch 10 :  average_loss = 0.0012, train_acc = 329.4925, val_acc = 0.8150
+
+--------
+EPOCH 43
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1173
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0040, train_acc = 329.3095, val_acc = 0.6950
+d-step 1 epoch 2 :  average_loss = 0.0017, train_acc = 329.4581, val_acc = 0.7100
+d-step 1 epoch 3 :  average_loss = 0.0015, train_acc = 329.4717, val_acc = 0.6950
+d-step 1 epoch 4 :  average_loss = 0.0014, train_acc = 329.4790, val_acc = 0.7100
+d-step 1 epoch 5 :  average_loss = 0.0013, train_acc = 329.4848, val_acc = 0.7000
+d-step 1 epoch 6 :  average_loss = 0.0013, train_acc = 329.4896, val_acc = 0.7050
+d-step 1 epoch 7 :  average_loss = 0.0013, train_acc = 329.4914, val_acc = 0.7150
+d-step 1 epoch 8 :  average_loss = 0.0012, train_acc = 329.4948, val_acc = 0.7150
+d-step 1 epoch 9 :  average_loss = 0.0012, train_acc = 329.4959, val_acc = 0.7050
+d-step 1 epoch 10 :  average_loss = 0.0012, train_acc = 329.4981, val_acc = 0.7150
+
+--------
+EPOCH 44
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.0943
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0037, train_acc = 329.3373, val_acc = 0.7900
+d-step 1 epoch 2 :  average_loss = 0.0016, train_acc = 329.4644, val_acc = 0.7800
+d-step 1 epoch 3 :  average_loss = 0.0014, train_acc = 329.4810, val_acc = 0.7950
+d-step 1 epoch 4 :  average_loss = 0.0013, train_acc = 329.4858, val_acc = 0.7900
+d-step 1 epoch 5 :  average_loss = 0.0013, train_acc = 329.4936, val_acc = 0.7900
+d-step 1 epoch 6 :  average_loss = 0.0012, train_acc = 329.4950, val_acc = 0.7900
+d-step 1 epoch 7 :  average_loss = 0.0012, train_acc = 329.4977, val_acc = 0.7800
+d-step 1 epoch 8 :  average_loss = 0.0011, train_acc = 329.5011, val_acc = 0.7700
+d-step 1 epoch 9 :  average_loss = 0.0011, train_acc = 329.5023, val_acc = 0.7850
+d-step 1 epoch 10 :  average_loss = 0.0011, train_acc = 329.5036, val_acc = 0.7950
+
+--------
+EPOCH 45
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1043
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0040, train_acc = 329.3028, val_acc = 0.7250
+d-step 1 epoch 2 :  average_loss = 0.0016, train_acc = 329.4636, val_acc = 0.7600
+d-step 1 epoch 3 :  average_loss = 0.0014, train_acc = 329.4828, val_acc = 0.7500
+d-step 1 epoch 4 :  average_loss = 0.0013, train_acc = 329.4901, val_acc = 0.7550
+d-step 1 epoch 5 :  average_loss = 0.0012, train_acc = 329.4944, val_acc = 0.7600
+d-step 1 epoch 6 :  average_loss = 0.0012, train_acc = 329.4986, val_acc = 0.7600
+d-step 1 epoch 7 :  average_loss = 0.0011, train_acc = 329.5021, val_acc = 0.7750
+d-step 1 epoch 8 :  average_loss = 0.0011, train_acc = 329.5003, val_acc = 0.7550
+d-step 1 epoch 9 :  average_loss = 0.0011, train_acc = 329.5029, val_acc = 0.7600
+d-step 1 epoch 10 :  average_loss = 0.0011, train_acc = 329.5066, val_acc = 0.7850
+
+--------
+EPOCH 46
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1143
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0036, train_acc = 329.3245, val_acc = 0.7850
+d-step 1 epoch 2 :  average_loss = 0.0015, train_acc = 329.4736, val_acc = 0.8100
+d-step 1 epoch 3 :  average_loss = 0.0013, train_acc = 329.4896, val_acc = 0.8100
+d-step 1 epoch 4 :  average_loss = 0.0012, train_acc = 329.4955, val_acc = 0.8150
+d-step 1 epoch 5 :  average_loss = 0.0011, train_acc = 329.4989, val_acc = 0.8200
+d-step 1 epoch 6 :  average_loss = 0.0011, train_acc = 329.5027, val_acc = 0.8250
+d-step 1 epoch 7 :  average_loss = 0.0011, train_acc = 329.5034, val_acc = 0.8300
+d-step 1 epoch 8 :  average_loss = 0.0011, train_acc = 329.5063, val_acc = 0.8050
+d-step 1 epoch 9 :  average_loss = 0.0010, train_acc = 329.5085, val_acc = 0.8250
+d-step 1 epoch 10 :  average_loss = 0.0010, train_acc = 329.5076, val_acc = 0.8200
+
+--------
+EPOCH 47
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1123
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0041, train_acc = 329.2864, val_acc = 0.7150
+d-step 1 epoch 2 :  average_loss = 0.0016, train_acc = 329.4681, val_acc = 0.7550
+d-step 1 epoch 3 :  average_loss = 0.0013, train_acc = 329.4864, val_acc = 0.7650
+d-step 1 epoch 4 :  average_loss = 0.0012, train_acc = 329.4962, val_acc = 0.7300
+d-step 1 epoch 5 :  average_loss = 0.0012, train_acc = 329.4998, val_acc = 0.7700
+d-step 1 epoch 6 :  average_loss = 0.0011, train_acc = 329.5040, val_acc = 0.7700
+d-step 1 epoch 7 :  average_loss = 0.0011, train_acc = 329.5060, val_acc = 0.7500
+d-step 1 epoch 8 :  average_loss = 0.0010, train_acc = 329.5087, val_acc = 0.7800
+d-step 1 epoch 9 :  average_loss = 0.0010, train_acc = 329.5097, val_acc = 0.7550
+d-step 1 epoch 10 :  average_loss = 0.0010, train_acc = 329.5097, val_acc = 0.7800
+
+--------
+EPOCH 48
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1358
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0029, train_acc = 329.3784, val_acc = 0.7950
+d-step 1 epoch 2 :  average_loss = 0.0014, train_acc = 329.4846, val_acc = 0.8050
+d-step 1 epoch 3 :  average_loss = 0.0012, train_acc = 329.4968, val_acc = 0.8100
+d-step 1 epoch 4 :  average_loss = 0.0011, train_acc = 329.5013, val_acc = 0.8150
+d-step 1 epoch 5 :  average_loss = 0.0011, train_acc = 329.5059, val_acc = 0.8000
+d-step 1 epoch 6 :  average_loss = 0.0011, train_acc = 329.5059, val_acc = 0.7950
+d-step 1 epoch 7 :  average_loss = 0.0010, train_acc = 329.5091, val_acc = 0.8150
+d-step 1 epoch 8 :  average_loss = 0.0010, train_acc = 329.5120, val_acc = 0.7950
+d-step 1 epoch 9 :  average_loss = 0.0010, train_acc = 329.5124, val_acc = 0.8200
+d-step 1 epoch 10 :  average_loss = 0.0010, train_acc = 329.5134, val_acc = 0.8300
+
+--------
+EPOCH 49
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1418
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0036, train_acc = 329.3392, val_acc = 0.7950
+d-step 1 epoch 2 :  average_loss = 0.0014, train_acc = 329.4769, val_acc = 0.7950
+d-step 1 epoch 3 :  average_loss = 0.0012, train_acc = 329.4959, val_acc = 0.7950
+d-step 1 epoch 4 :  average_loss = 0.0011, train_acc = 329.5018, val_acc = 0.8050
+d-step 1 epoch 5 :  average_loss = 0.0011, train_acc = 329.5069, val_acc = 0.7950
+d-step 1 epoch 6 :  average_loss = 0.0010, train_acc = 329.5084, val_acc = 0.8200
+d-step 1 epoch 7 :  average_loss = 0.0010, train_acc = 329.5111, val_acc = 0.8100
+d-step 1 epoch 8 :  average_loss = 0.0010, train_acc = 329.5122, val_acc = 0.8000
+d-step 1 epoch 9 :  average_loss = 0.0010, train_acc = 329.5124, val_acc = 0.8050
+d-step 1 epoch 10 :  average_loss = 0.0010, train_acc = 329.5147, val_acc = 0.8100
+
+--------
+EPOCH 50
+--------
+
+Adversarial Training Generator :  oracle_sample_NLL = 2.1446
+
+Adversarial Training Discriminator : 
+d-step 1 epoch 1 :  average_loss = 0.0037, train_acc = 329.3238, val_acc = 0.7600
+d-step 1 epoch 2 :  average_loss = 0.0018, train_acc = 329.4447, val_acc = 0.7800
+d-step 1 epoch 3 :  average_loss = 0.0015, train_acc = 329.4654, val_acc = 0.7650
+d-step 1 epoch 4 :  average_loss = 0.0012, train_acc = 329.4978, val_acc = 0.8000
+d-step 1 epoch 5 :  average_loss = 0.0011, train_acc = 329.5041, val_acc = 0.7950
+d-step 1 epoch 6 :  average_loss = 0.0011, train_acc = 329.5066, val_acc = 0.7950
+d-step 1 epoch 7 :  average_loss = 0.0010, train_acc = 329.5102, val_acc = 0.8000
+d-step 1 epoch 8 :  average_loss = 0.0010, train_acc = 329.5119, val_acc = 0.7850
+d-step 1 epoch 9 :  average_loss = 0.0010, train_acc = 329.5121, val_acc = 0.7950
+d-step 1 epoch 10 :  average_loss = 0.0010, train_acc = 329.5129, val_acc = 0.7800
+
+Train time: 6.496306082341406
