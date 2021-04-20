@@ -98,8 +98,7 @@ def generate_samples(model, batch_size, generated_num, output_file):
 def train_epoch(model, data_iter, criterion, optimizer):
     total_loss = 0.
     total_words = 0.
-    for (data, target) in data_iter:#tqdm(
-        #data_iter, mininterval=2, desc=' - Training', leave=False):
+    for (data, target) in data_iter:
         data = Variable(data)
         target = Variable(target)
         if opt.cuda:
@@ -112,7 +111,6 @@ def train_epoch(model, data_iter, criterion, optimizer):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        #print("loss: {}".format(loss))
     data_iter.reset()
     return math.exp(total_loss / total_words)
 
@@ -120,8 +118,7 @@ def eval_epoch(model, data_iter, criterion):
     total_loss = 0.
     total_words = 0.
     with torch.no_grad():
-        for (data, target) in data_iter:#tqdm(
-            #data_iter, mininterval=2, desc=' - Training', leave=False):
+        for (data, target) in data_iter:#
             data = Variable(data)
             target = Variable(target)
             if opt.cuda:
@@ -188,28 +185,26 @@ def main():
     gen_data_iter = GenDataIter(POSITIVE_FILE, BATCH_SIZE)
 
     # Pretrain Generator using MLE
-    #gen_criterion = nn.NLLLoss(reduction='sum')
     gen_criterion = nn.NLLLoss(size_average = False)
     gen_optimizer = optim.Adam(generator.parameters())
     if opt.cuda:
         gen_criterion = gen_criterion.cuda()
 
-    # print('Pretrain with MLE ...')
-    # for epoch in range(PRE_EPOCH_NUM):
-    #     loss = train_epoch(generator, gen_data_iter, gen_criterion, gen_optimizer)
-    #     print('Epoch [%d] Model Loss: %f'% (epoch, loss))
-    #     with open('log_G_rollout.txt', "a") as writer:
-    #         print('Epoch [%d] Model Loss: %f'% (epoch, loss), file=writer)
-    # torch.save(generator, 'G_rollout_50_to_100.pt')
+    print('Pretrain with MLE ...')
+    for epoch in range(PRE_EPOCH_NUM):
+        loss = train_epoch(generator, gen_data_iter, gen_criterion, gen_optimizer)
+        print('Epoch [%d] Model Loss: %f'% (epoch, loss))
+        with open('log_G_rollout.txt', "a") as writer:
+            print('Epoch [%d] Model Loss: %f'% (epoch, loss), file=writer)
+    torch.save(generator, 'G_rollout_50_to_100.pt')
 
 
     # generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE) NO
-        # eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
-        # loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
-        # print('Epoch [%d] True Loss: %f' % (epoch, loss))
+    #     eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
+    #     loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
+    #     print('Epoch [%d] True Loss: %f' % (epoch, loss))
 
     # Pretrain Discriminator
-    #dis_criterion = nn.NLLLoss(reduction='sum')
     dis_criterion = nn.NLLLoss(size_average = False)
     dis_optimizer = optim.Adam(discriminator.parameters())
     if opt.cuda:
@@ -265,14 +260,8 @@ def main():
             gen_gan_optm.step()
 
         if total_batch % 5 == 0 or total_batch == TOTAL_BATCH - 1:
-            # generate_samples(generator, BATCH_SIZE, GENERATED_NUM, EVAL_FILE)
-            # eval_iter = GenDataIter(EVAL_FILE, BATCH_SIZE)
-            # loss = eval_epoch(target_lstm, eval_iter, gen_criterion)
-            # print('Epoch [%d] True Loss: %f' % (total_batch, loss))
-
             predictions = torch.max(prob, dim=1)[1]
             predictions = predictions.view(BATCH_SIZE*2, -1)
-            # print('PRED SHAPE:' , predictions.shape)
             for each_sen in list(predictions)[:8]:
                 print('Training Output:', [inv_vocab[j.item()] for j in each_sen])
                 with open('log_ADV_rollout.txt', "a") as writer:
@@ -293,9 +282,7 @@ def main():
     torch.save(generator,'G_adv_rollout.pt')
     torch.save(discriminator,'D_adv_rollout.pt')
 
-
-    #generator = torch.load('G_rollout_50_to_100.pt')
-
+    # GENERATE JOKES
     sentences = generator.sample(10000, g_sequence_len)
     build = ""
     with open(RESULT_FILE, "w") as writer:

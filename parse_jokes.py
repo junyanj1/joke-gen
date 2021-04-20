@@ -18,7 +18,6 @@ id = 0
 lens = []
 overflow = 0
 joke_list = []
-ym = 0
 max_seq_len = 20
 for filename in sorted(["reddit_jokes.json"]):
     with open(os.path.join('data', filename), mode='r') as fin:
@@ -37,14 +36,8 @@ for filename in sorted(["reddit_jokes.json"]):
                 continue
             joke_list.append(s)
             lens.append(l)
-            #fout.write("{},{}".format(id, s))
-            #fout.write('\n')
-            if "yo mama" in s:
-                ym += 1
-
             id += 1
-            # if id > 100:
-            #     quit()
+
 for filename in sorted(["wocka.json", "stupidstuff.json"]):
     with open(os.path.join('data', filename), mode='r') as fin:
         jokes = json.load(fin)
@@ -61,18 +54,14 @@ for filename in sorted(["wocka.json", "stupidstuff.json"]):
                 continue
             lens.append(l)
             joke_list.append(s)
-            if "yo mama" in s:
-                ym += 1
-            #fout.write("{},{}".format(id, s))
-            #fout.write('\n')
+
             id += 1
 
-print("ym =", ym)
+
 lens = np.array(lens)
 #print(lens)
 #plt.hist(lens, bins=20)
 #plt.show()
-print(overflow)
 
 jokes = random.sample(joke_list, 28000)
 
