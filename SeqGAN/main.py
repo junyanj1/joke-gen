@@ -276,7 +276,7 @@ if __name__ == '__main__':
 
     print('\nInitial Oracle Sample Loss : %.4f' % oracle_loss)
 
-    log_file_3 = 'logs_gan.txt'
+    log_file_3 = 'logs_gan_d3_k4.txt'
     start_time = time.time()
     for epoch in range(ADV_TRAIN_EPOCHS):
         with open(log_file_3, "a") as writer:
@@ -286,7 +286,7 @@ if __name__ == '__main__':
         # TRAIN GENERATOR
         print('\nAdversarial Training Generator : ', end='')
         sys.stdout.flush()
-        train_generator_PG(gen, gen_optimizer, gen, dis, 1, epoch+MLE_TRAIN_EPOCHS, log_file_3)
+        train_generator_PG(gen, gen_optimizer, gen, dis, 100, epoch+MLE_TRAIN_EPOCHS, log_file_3)
 
         # TRAIN DISCRIMINATOR
         with open(log_file_3, "a") as writer:
@@ -294,12 +294,12 @@ if __name__ == '__main__':
             print('\nAdversarial Training Discriminator : ')
 
         val_loader = torch.utils.data.DataLoader(val_iter, batch_size=100, shuffle=True, collate_fn=collate_batch)
-        train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, 5, 3, log_file_3)
+        train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, 1, 10, log_file_3)
         # train_discriminator(dis, dis_optimizer, oracle_samples, gen, oracle, 5, 3, log_file_3)
 
         if epoch == 20 or epoch == 35:
-            torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
-            torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
+            torch.save(gen, 'netG_adv_d3_k4{}.pt'.format(epoch))
+            torch.save(dis, 'netD_adv_d3_k4{}.pt'.format(epoch))
 
 
     with open(log_file_3, "a") as writer:
@@ -307,14 +307,14 @@ if __name__ == '__main__':
         print(total_time, file=writer)
         print(total_time)
     print("Saving adversarial models")
-    torch.save(gen, 'netG_adv_{}.pt'.format(ADV_TRAIN_EPOCHS))
-    torch.save(dis, 'netD_adv_{}.pt'.format(ADV_TRAIN_EPOCHS))
+    torch.save(gen, 'netG_adv_d3_k4{}.pt'.format(ADV_TRAIN_EPOCHS))
+    torch.save(dis, 'netD_adv_d3_k4{}.pt'.format(ADV_TRAIN_EPOCHS))
 
 
     # gen = generator.Generator(GEN_EMBEDDING_DIM, GEN_HIDDEN_DIM, VOCAB_SIZE, MAX_SEQ_LEN, gpu=CUDA)
     # gen = torch.load('netG_adv_20.pt')
 
-    result_file = 'sentences.txt'
+    result_file = 'sentences_d3_k4.txt'
     sentences = gen.sample(10000)
     build = ""
     with open(result_file, "w") as writer:
