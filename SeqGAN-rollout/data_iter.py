@@ -39,7 +39,9 @@ class GenDataIter(object):
         d = [self.data_lis[i] for i in index]
         d = torch.LongTensor(np.asarray(d, dtype='int64'))
         data = torch.cat([torch.zeros(self.batch_size, 1).long(), d], dim=1)
+        print(data)
         target = torch.cat([d, torch.zeros(self.batch_size, 1).long()], dim=1)
+        print(target)
         self.idx += self.batch_size
         return data, target
 

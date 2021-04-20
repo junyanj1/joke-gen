@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 
-import os
 import random
 import math
 
@@ -14,8 +13,7 @@ import torch.optim as optim
 from torch.autograd import Variable
 import torchtext as tt
 
-from generator import Generator
-from discriminator import Discriminator
+from SeqGAN.discriminator import Discriminator
 from target_lstm import TargetLSTM
 from rollout import Rollout
 from data_iter import GenDataIter, DisDataIter
