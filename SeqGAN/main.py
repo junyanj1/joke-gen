@@ -297,6 +297,10 @@ if __name__ == '__main__':
         train_discriminator(dis, dis_optimizer, train_loader, gen, val_loader, 5, 3, log_file_3)
         # train_discriminator(dis, dis_optimizer, oracle_samples, gen, oracle, 5, 3, log_file_3)
 
+        if epoch == 20 or epoch == 35:
+            torch.save(gen, 'netG_adv_{}.pt'.format(epoch))
+            torch.save(dis, 'netD_adv_{}.pt'.format(epoch))
+
 
     with open(log_file_3, "a") as writer:
         total_time = "\nTrain time: {}".format((time.time()-start_time)/3600.)
