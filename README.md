@@ -21,7 +21,10 @@ $ cd SeqGAN-rollout/
 $ python main.py
 ```
 #### /ColBERT humor 
-- evaluation framework using ColBERT model and BLEU scores
+- evaluation framework using ColBERT model and BLEU score
+- Please see the jupyter notebook
+- base on paper: [https://arxiv.org/pdf/2004.12765v5.pdf] (ColBERT: Using BERT Sentence Embedding for
+Humor Detection) and Python package [https://pypi.org/project/FastBLEU/] (FastBLEU)
 
 
 
